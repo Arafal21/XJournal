@@ -13,7 +13,7 @@
 
 ## 🔥 1. Quick start
 
-### Live: [https://nodejs.org/en](https://nodejs.org/en)
+### Live: [e-xjournal.vercel.app](e-xjournal.vercel.app)
 
 ### Repository: [https://github.com/Arafal21/XJournal](https://github.com/Arafal21/XJournal)
 
