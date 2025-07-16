@@ -13,7 +13,7 @@
 
 ## 🔥 1. Quick start
 
-### Live: [https://www.e-xjournal.vercel.app](e-xjournal.vercel.app)
+### Live: [https://x-journal-cv.vercel.app/](https://x-journal-cv.vercel.app/)
 
 ### Repository: [https://github.com/Arafal21/XJournal](https://github.com/Arafal21/XJournal)
 
