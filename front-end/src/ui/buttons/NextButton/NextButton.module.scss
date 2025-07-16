@@ -1,0 +1,18 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins' as *;
+@use '../../../styles/z-indexes.scss' as *;
+
+.nextBtn {
+	@include previousNextBtnMobile;
+
+	&:outline {
+		outline: 0.13rem solid #000;
+		outline-offset: 0.13rem;
+	}
+}
+
+@media (width >= 768px) {
+	.nextBtn {
+		@include previousNextBtnDesktop;
+	}
+}

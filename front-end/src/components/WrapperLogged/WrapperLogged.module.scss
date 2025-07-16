@@ -1,0 +1,38 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins' as *;
+@use '../../styles/z-indexes.scss' as *;
+
+.wrapperForLogged {
+	max-width: 100rem;
+	min-height: 100vh;
+	background-color: $white-300;
+	margin-bottom: 5rem;
+}
+
+.whiteBackground {
+	background-color: $white-50;
+}
+
+.grayBackground {
+	background-color: $white-300;
+}
+
+.paddingMobile {
+	padding: 1rem;
+	// padding: 0.5rem 1rem 5.5rem;
+}
+
+@media (width >= 768px) {
+	.paddingMobile {
+		padding: 0;
+	}
+	.wrapperForLogged {
+		padding: 1.5rem;
+		margin: 0 0 0 12.25rem;
+	}
+
+	.whiteBackground,
+	.grayBackground {
+		background-color: $white-300;
+	}
+}

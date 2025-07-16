@@ -1,0 +1,17 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins' as *;
+@use '../../../styles/z-indexes.scss' as *;
+
+.dropDownButtonContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+
+	.extendBtn {
+		display: flex;
+		width: 100%;
+		margin-top: $spacing-sm;
+		cursor: pointer;
+	}
+}

@@ -1,0 +1,54 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins' as *;
+@use '../../styles/z-indexes.scss' as *;
+
+.userRow {
+    display: flex;
+    justify-content: space-between;
+    padding: $vertical-padding-sm $horizontal-padding-xl;
+    cursor: pointer;
+
+    .userContainer {
+        display: flex;
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: $spacing-lg;
+
+            word-break: break-all;
+
+            .name {
+                @include body-400;
+                color: $text-grey-300;
+            }
+
+            .email {
+                @include body-2-400;
+                color: $text-grey-200;
+            }
+        }
+    }
+
+    .userContainer,
+    .groupContainer,
+    .contactNumberContainer {
+        width: 33.3%;
+    }
+
+    .groupContainer {
+        margin: 0 $spacing-2xl;
+    }
+
+    .groupContainer,
+    .contactNumberContainer {
+        display: flex;
+        align-items: center;
+
+        .text {
+            @include body-400;
+            color: $text-grey-300;
+        }
+    }
+}

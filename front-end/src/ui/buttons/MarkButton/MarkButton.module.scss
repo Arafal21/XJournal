@@ -1,0 +1,37 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins' as *;
+@use '../../../styles/z-indexes.scss' as *;
+
+.grades {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 3rem;
+	height: 3rem;
+	border: 1px solid $text-grey-50;
+	border-radius: 0.5rem;
+	margin-right: $spacing-lg;
+	background-color: $white-300;
+	color: $text-grey-300;
+}
+
+@media (width < 768px) {
+	.grades {
+		flex: 0 0 3rem;
+	}
+}
+
+@media (width >= 768px) {
+	.grades {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 2rem;
+		height: 2rem;
+		border: 1px solid $text-grey-50;
+		border-radius: 0.5rem;
+		margin-right: $spacing-lg;
+		background-color: $white-300;
+		color: $text-grey-300;
+	}
+}

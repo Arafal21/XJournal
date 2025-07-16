@@ -1,0 +1,26 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins' as *;
+@use '../../styles/z-indexes.scss' as *;
+
+.modalContent {
+	width: 100%;
+	overflow-y: auto;
+	max-height: 80vh;
+	overflow-y: auto;
+
+	.items {
+		padding: $spacing-2xl $horizontal-padding-2xl;
+
+		.item {
+			margin-bottom: $spacing-2xl;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+			.date {
+				@include body-400;
+				color: $text-grey-300;
+			}
+		}
+	}
+}

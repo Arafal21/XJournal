@@ -1,0 +1,17 @@
+@use '../../styles/variables.scss' as *;
+
+.semesterContainer {
+	margin-top: $spacing-lg;
+	display: flex;
+	align-items: center;
+	background-color: $white-300;
+	height: 2.5rem;
+	border-radius: 2rem;
+}
+
+@media (width >= 768px) {
+	.semesterContainer {
+		margin-left: 1.5rem;
+		margin-top: 0;
+	}
+}

@@ -1,0 +1,15 @@
+@use '../../styles/variables.scss' as *;
+
+.linkTextActive {
+	color: $white-50;
+}
+
+.rowForced {
+	margin-left: $spacing-sm;
+}
+
+@media (width >= 768px) {
+	.linkText {
+		padding-left: $spacing-sm;
+	}
+}

@@ -1,0 +1,28 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins' as *;
+@use '../../styles/z-indexes.scss' as *;
+
+@media (width >= 768px) {
+	.daysContainer {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+
+		.scheduleBlock {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			margin-right: 10px;
+			.dayText {
+				@include body-400;
+				color: $text-grey-300;
+				text-align: center;
+				height: 3rem;
+			}
+		}
+
+		.scheduleBlock:last-of-type {
+			margin-right: 0px;
+		}
+	}
+}

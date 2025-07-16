@@ -1,0 +1,25 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins' as *;
+@use '../../../styles/z-indexes.scss' as *;
+
+.months {
+	display: flex;
+	margin: $spacing-lg 0;
+	overflow-x: auto;
+	white-space: nowrap;
+	gap: $spacing-lg;
+	padding-bottom: 0.5rem;
+
+	.monthSelectingBtn {
+		@include body-400;
+		color: $text-grey-300;
+		padding: $horizontal-padding-md $horizontal-padding-lg;
+	}
+
+	.active {
+		@include body-600;
+		border-radius: var(--corner-radius-md, 0.75rem);
+		border: 1px solid var(--Color-blue-accent-blue-100, #e9e8f5);
+		background-color: $white-300;
+	}
+}

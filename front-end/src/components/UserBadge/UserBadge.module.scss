@@ -1,0 +1,42 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins' as *;
+@use '../../styles/z-indexes.scss' as *;
+
+.limitedWidth {
+	max-width: 5rem;
+}
+
+.user {
+	display: flex;
+	align-items: center;
+
+	.nameAndRole {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin: 0 $spacing-sm;
+		width: 100%;
+		white-space: normal;
+		overflow-wrap: break-word;
+
+		.role {
+			margin-top: $spacing-xs;
+		}
+
+		.role,
+		.name {
+			@include body-2-400;
+			color: $text-grey-300;
+		}
+	}
+}
+
+@media (width >= 768px) {
+	.user {
+		.nameAndRole {
+			.name {
+				@include body-2-400;
+			}
+		}
+	}
+}

@@ -1,0 +1,8 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins' as *;
+
+.welcome {
+	@include header-2-400;
+	color: $text-grey-300;
+	margin-bottom: $spacing-2xl;
+}

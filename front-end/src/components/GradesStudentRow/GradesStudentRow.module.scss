@@ -1,0 +1,49 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins' as *;
+
+.gradesContainer {
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid $light-hover;
+	padding: $vertical-padding-md 0;
+
+	.dataContainer {
+		display: flex;
+		align-items: center;
+
+		.name {
+			@include body-400;
+			margin-left: $spacing-sm;
+			color: $text-grey-300;
+			width: 8rem;
+		}
+	}
+
+	.gradesControl {
+		display: flex;
+		overflow: auto;
+		
+		.gradesList {
+			display: flex;
+			overflow: auto;
+		}
+	}
+}
+
+@media (width >= 768px) {
+	.gradesContainer {
+		padding: $vertical-padding-md 0;
+
+		.dataContainer {
+			display: flex;
+			align-items: center;
+
+			.name {
+				@include body-400;
+				margin-left: $spacing-sm;
+				color: $text-grey-300;
+				width: 8rem;
+			}
+		}
+	}
+}

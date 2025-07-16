@@ -1,0 +1,42 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins' as *;
+@use '../../../styles/z-indexes.scss' as *;
+
+.modalContent {
+	display: flex;
+	flex-direction: column;
+	padding: $spacing-lg;
+	overflow-y: auto;
+
+	.selectedDay {
+		@include header-3-400;
+		margin: $spacing-3xl 0;
+		color: $text-grey-300;
+		text-align: center;
+	}
+
+	.subjectContainer,
+	.lessonIntervalContainer,
+	.radioGroup {
+		margin-bottom: $spacing-lg;
+	}
+
+	.buttonContainer {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+@media (width >=768px) {
+	.modalContent {
+		padding: $spacing-2xl;
+
+		.selectedDay {
+			margin: $spacing-2xl 0;
+		}
+
+		.buttonContainer {
+			margin-top: $spacing-2xl;
+		}
+	}
+}

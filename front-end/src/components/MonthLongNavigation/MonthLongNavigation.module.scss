@@ -1,0 +1,21 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins' as *;
+@use '../../styles/z-indexes.scss' as *;
+
+.calendarControl {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 3rem;
+	padding: 0 $horizontal-padding-md;
+	border-radius: $corner-radius-sm;
+	border: 1px solid $light-hover;
+	background-color: $white-300;
+	width: 16.25rem;
+
+	.selectedPeriod {
+		@include header-3-400;
+		color: $text-grey-300;
+		margin: 0 $spacing-lg;
+	}
+}

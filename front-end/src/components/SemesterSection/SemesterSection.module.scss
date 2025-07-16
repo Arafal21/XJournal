@@ -1,0 +1,50 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins' as *;
+
+.semesterSection {
+	.semesterHeading {
+		@include header-3-400;
+		margin-top: $spacing-lg;
+		color: $text-grey-300;
+	}
+
+	&:last-of-type {
+		.semesterHeading {
+			margin-top: $spacing-2xl;
+		}
+	}
+
+	.row {
+		display: flex;
+		align-items: center;
+		border-bottom: $stroke-xs solid $light-hover;
+		padding: 1.5rem 0;
+
+		.grades {
+			display: flex;
+			overflow-x: auto;
+
+			> * {
+				flex: 0 0 auto;
+			}
+		}
+	}
+
+	@media (min-width: 768px) {
+		.semesterHeading {
+			@include header-2-400;
+			margin-top: auto;
+		}
+
+		/*  Last section element get margin */
+		&:last-of-type {
+			.semesterHeading {
+				margin-top: $spacing-4xl;
+			}
+		}
+
+		.row {
+			padding: 1rem 0;
+		}
+	}
+}

@@ -1,0 +1,57 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins' as *;
+@use '../../styles/z-indexes.scss' as *;
+
+@media (width >= 768px) {
+	.sectionTitle {
+		@include body-600;
+		color: $text-grey-300;
+		margin-bottom: $spacing-sm;
+	}
+
+	.inputIcon {
+		margin: 0 $spacing-lg 0 $vertical-padding-lg;
+	}
+
+	.required {
+		@include body-400;
+		color: $text-grey-300;
+		margin-bottom: $spacing-sm;
+		margin-top: $spacing-lg;
+	}
+	
+	.error {
+		color: $warning-500;
+	}
+
+
+	.inputContainer:focus-within {
+		border: $stroke-xs solid $green-500;
+	}
+
+	.inputContainer:focus-within .inputIcon path {
+		stroke: $green-500;
+	}
+
+	.inputContainer {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		border: $stroke-xs solid $light-hover;
+		border-radius: $corner-radius-sm;
+		background-color: $white-300;
+
+		.iconContainer {
+			display: flex;
+		}
+
+		.toggleVisibility {
+			position: absolute;
+			right: $vertical-padding-lg;
+			cursor: pointer;
+			font-size: 1.5rem;
+		}
+	}
+}

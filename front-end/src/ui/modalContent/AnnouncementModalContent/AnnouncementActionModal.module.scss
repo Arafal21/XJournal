@@ -1,0 +1,106 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins' as *;
+@use '../../../styles/z-indexes.scss' as *;
+
+.form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	width: 100%;
+	height: 100%;
+
+	.modalContent {
+		height: 100%;
+		margin-top: 1rem;
+		padding: $vertical-padding-lg $horizontal-padding-lg;
+		background-color: $white-50;
+		border-radius: $corner-radius-sm;
+		border: 1px solid $light-hover;
+		width: 100%;
+
+		.mobileTopMenu {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-bottom: $spacing-xl;
+		}
+
+		.line {
+			height: 1px;
+			width: 100%;
+			margin: $spacing-lg 0;
+			background-color: $light-hover;
+		}
+
+		.textArea {
+			width: 100%;
+			border: none;
+			height: 22rem;
+			resize: none;
+			transition: height 0.3s ease-in-out;
+		}
+
+		.backBtnMobile {
+			display: flex;
+			align-items: center;
+			margin-bottom: $spacing-xl;
+
+			.backBtnText {
+				@include button-600;
+				color: $text-grey-300;
+				margin-left: $spacing-xs;
+			}
+		}
+
+		.userInfo {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+
+			.date {
+				@include body-2-400;
+				color: $text-grey-300;
+			}
+		}
+	}
+
+	.required {
+		.error {
+			margin-top: $spacing-2xl;
+			text-align: center;
+			color: $warning-500;
+		}
+	}
+}
+
+@media (width >= 768px) {
+	.form {
+		align-items: center;
+
+		.modalContent {
+			margin-top: auto;
+			height: 23rem;
+			width: 100%;
+			border-radius: $corner-radius-sm;
+			transition: height 0.3s;
+			
+			.userInfo {
+				.date {
+					@include body-2-400;
+				}
+			}
+
+			.textArea {
+				height: 8.5rem;
+			}
+			.textAreaExtended {
+				height: 15.5rem;
+			}
+		}
+		.modalExtended {
+			height: 16rem;
+		}
+	}
+}

@@ -1,0 +1,15 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins' as *;
+
+.subjectText {
+	@include body-2-400;
+    width: 9rem;
+    color: $text-grey-300;
+}
+
+@media (width >= 768px) {
+    .subjectText {
+        @include body-400;
+        width: 8.375rem;
+	}
+}

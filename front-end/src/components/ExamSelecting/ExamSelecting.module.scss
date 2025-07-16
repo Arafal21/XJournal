@@ -1,0 +1,9 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins' as *;
+@use '../../styles/z-indexes.scss' as *;
+
+.heading {
+	@include body-400;
+	color: $text-grey-300;
+	margin-bottom: $spacing-sm;
+}

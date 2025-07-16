@@ -1,0 +1,35 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins' as *;
+@use '../../../styles/z-indexes.scss' as *;
+.select {
+	@include body-400;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: $white-300;
+	border: 1px $light-hover solid;
+	border-radius: $corner-radius-sm;
+	padding: $horizontal-padding-md $vertical-padding-lg;
+	cursor: pointer;
+	width: 100%;
+
+	.selected {
+		display: flex;
+		align-items: center;
+		color: $text-grey-300;
+
+		.icon {
+			margin-right: $spacing-lg;
+			display: flex;
+		}
+
+		.peopleImg {
+			margin-right: $spacing-sm;
+		}
+	}
+}
+
+.activeBorder {
+	border: 1px solid $green-500;
+}
+

@@ -1,0 +1,43 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins' as *;
+@use '../../styles/z-indexes.scss' as *;
+
+.modalContent {
+	width: 100%;
+	overflow-y: auto;
+	max-height: 80vh;
+	overflow-y: auto;
+
+	.line {
+		background-color: $light-hover;
+		height: 1px;
+		width: 100%;
+	}
+
+	.items {
+		padding: $spacing-2xl $horizontal-padding-2xl;
+		
+		.item {
+			margin-bottom: $spacing-2xl;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+			.date {
+				@include body-400;
+				color: $text-grey-300;
+			}
+		}
+
+		.actionsContainer {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			.maxText {
+				@include body-400;
+				color: $text-grey-300;
+			}
+		}
+	}
+}

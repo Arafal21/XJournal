@@ -1,0 +1,27 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins' as *;
+@use '../../../styles/z-indexes.scss' as *;
+
+.buttonReady,
+.buttonNoReady {
+	@include button-600;
+	width: 100%;
+	text-transform: uppercase;
+	border-radius: $corner-radius-2xl;
+	padding: $vertical-padding-xl;
+}
+
+.buttonReady {
+	color: $text-grey-50;
+	background-color: $normal;
+	transition: background-color 0.3s;
+
+	&:hover {
+		background-color: $normal-hover;
+	}
+}
+
+.buttonNoReady {
+	background-color: $secondary-grey-100;
+	color: $text-grey-200;
+}

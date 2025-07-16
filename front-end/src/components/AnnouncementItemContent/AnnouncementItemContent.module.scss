@@ -1,0 +1,74 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins' as *;
+
+.createdInfo {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	.user {
+		display: flex;
+	}
+
+	.actions {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.nameAndRole {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin-left: $spacing-sm;
+
+		.name {
+			margin-bottom: $spacing-xs;
+		}
+
+		.name,
+		.role {
+			@include body-2-400;
+			color: $text-grey-300;
+		}
+
+		.role::first-letter {
+			text-transform: uppercase;
+		}
+	}
+
+	.postedAt {
+		@include body-2-400;
+		color: $text-grey-300;
+	}
+}
+
+.line {
+	background-color: $light-hover;
+	margin: $vertical-padding-lg 0;
+	height: 1px;
+	width: 100%;
+}
+
+.announcementText {
+	@include body-400;
+	white-space: pre-line;
+	color: $text-grey-300;
+	max-height: 14rem;
+	overflow: hidden;
+	transition: max-height 1s ease-in-out;
+}
+
+.announcementTextExtended {
+	max-height: 1000rem;
+}
+
+@media (width >= 768px) {
+	.announcementText {
+		max-height: 22.5rem;
+	}
+
+	.announcementTextExtended {
+		max-height: 1000rem;
+	}
+}

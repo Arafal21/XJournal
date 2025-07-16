@@ -1,0 +1,29 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins' as *;
+@use '../../../styles/z-indexes.scss' as *;
+
+.addMarkBtn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 3rem;
+	height: 3rem;
+	border-radius: $corner-radius-sm;
+	border: 1px solid $light-hover;
+	background-color: $normal;
+	box-shadow: $shadow-s-accent;
+	color: $text-grey-50;
+}
+
+@media (width < 768px) {
+	.addMarkBtn {
+		flex: 0 0 3rem;
+	}
+}
+
+@media (width >= 768px) {
+	.addMarkBtn {
+		width: 2rem;
+		height: 2rem;
+	}
+}

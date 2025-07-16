@@ -1,0 +1,162 @@
+@use 'variables.scss' as *;
+
+@mixin body-400() {
+	font-size: $font-size-md;
+	font-style: normal;
+	font-weight: $font-weight-regular;
+	line-height: $font-size-xl;
+}
+
+@mixin body-600() {
+	font-size: $font-size-md;
+	font-style: normal;
+	font-weight: $font-weight-semibold;
+	line-height: $font-size-xl;
+}
+
+@mixin body-2-400() {
+	font-size: $font-size-sm;
+	font-style: normal;
+	font-weight: $font-weight-regular;
+	line-height: $line-height-xs;
+}
+
+@mixin body-2-600() {
+	font-size: $font-size-sm;
+	font-style: normal;
+	font-weight: $font-weight-semibold;
+	line-height: $line-height-xs;
+}
+
+@mixin body-2-700() {
+	font-size: $font-size-sm;
+	font-style: normal;
+	font-weight: $font-weight-bold;
+	line-height: $line-height-xs;
+}
+
+@mixin header-1-600() {
+	font-size: $font-size-2xl;
+	font-style: normal;
+	font-weight: $font-weight-semibold;
+	line-height: $line-height-lg;
+}
+
+@mixin header-2-700() {
+	font-size: $font-size-xl;
+	font-style: normal;
+	font-weight: $font-weight-bold;
+	line-height: $line-height-md;
+}
+
+@mixin header-2-400() {
+	font-size: $font-size-xl;
+	font-style: normal;
+	font-weight: $font-weight-regular;
+	line-height: $line-height-md;
+}
+
+@mixin header-3-400() {
+	font-size: $font-size-lg;
+	font-style: normal;
+	font-weight: $font-weight-regular;
+	line-height: $line-height-sm;
+}
+
+@mixin header-3-600() {
+	font-size: $font-size-lg;
+	font-style: normal;
+	font-weight: $font-weight-semibold;
+	line-height: $line-height-sm;
+}
+
+@mixin button-600() {
+	font-size: $font-size-sm;
+	font-style: normal;
+	font-weight: $font-weight-semibold;
+	line-height: $line-height-xs;
+	text-transform: uppercase;
+}
+
+@mixin caption-400() {
+	font-size: $font-size-xs;
+	font-style: normal;
+	font-weight: $font-weight-regular;
+	line-height: $line-height-xs;
+}
+
+@mixin truncate-600() {
+	font-size: $font-size-xs;
+	font-style: normal;
+	font-weight: $font-weight-semibold;
+	line-height: $line-height-xs;
+}
+
+@mixin previousNextBtnMobile() {
+	width: 3rem;
+	height: 3rem;
+	border-radius: $corner-radius-xs;
+	border: 1px solid $light-hover;
+	background-color: $white-300;
+	box-shadow: $shadow-s-black;
+	cursor: pointer;
+}
+
+@mixin previousNextBtnDesktop() {
+	width: 1.5rem;
+	height: 1.5rem;
+	border-radius: $corner-radius-xs;
+	border: 1px solid $light-hover;
+	background: $white-50;
+	box-shadow: $shadow-s-black;
+}
+
+@mixin loginFormInput() {
+	@include body-400;
+	flex-grow: 1;
+	border-radius: 0 $stroke-xl $stroke-xl 0;
+	border: none;
+	outline: none;
+	padding: $horizontal-padding-md 0;
+	background-color: $white-300;
+}
+
+@mixin calendarBlockDesktop() {
+	@include body-400;
+	width: 20%;
+	height: 8.583rem;
+	transition: background-color 0.3s ease, box-shadow 0.3s ease;
+	border-right: 1px solid $light-hover;
+	border-bottom: 1px solid $light-hover;
+	padding: $horizontal-padding-sm $vertical-padding-sm;
+	cursor: pointer;
+}
+
+@mixin white-gradient() {
+	background: linear-gradient(0deg, #f8f8f8 1.04%, #eaeaea 100%);
+	box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.1) inset;
+}
+
+@mixin dark-green-gradient() {
+	background: linear-gradient(0deg, #5f6d64 1.04%, #495752 100%);
+}
+
+@mixin mustard-gradient() {
+	background: linear-gradient(0deg, #d1a754 1.04%, #b68c3d 100%);
+}
+
+@mixin pink-gradient() {
+	background: linear-gradient(0deg, #c96a87 1.04%, #a64e6c 100%);
+}
+
+@mixin blue-gradient() {
+	background: linear-gradient(0deg, #6c83ba 1.04%, #506aa3 100%);
+}
+
+@mixin light-green-gradient() {
+	background: linear-gradient(0deg, #20a490 1.04%, #188678 100%);
+}
+
+@mixin violet-gradient() {
+	background: linear-gradient(0deg, #5a54f6 1.04%, #4a46d9 100%);
+}

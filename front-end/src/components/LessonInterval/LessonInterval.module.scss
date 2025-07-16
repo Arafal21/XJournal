@@ -1,0 +1,32 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins' as *;
+@use '../../styles/z-indexes.scss' as *;
+
+@media (width>=768px) {
+	.timeLabelContainer {
+		display: flex;
+
+		.endLabel {
+			margin-left: 13.55rem;
+		}
+
+		.startLabel,
+		.endLabel {
+			@include body-400;
+			color: $text-grey-300;
+            margin-bottom: $spacing-sm;    
+		}
+	}
+
+	.timeInputs {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		.line {
+			width: 1.5rem;
+			height: 1px;
+			background-color: $text-grey-300;
+		}
+	}
+}

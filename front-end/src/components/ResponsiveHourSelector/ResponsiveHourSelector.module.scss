@@ -1,0 +1,8 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins' as *;
+@use '../../styles/z-indexes.scss' as *;
+
+.title {
+	@include body-400;
+	color: $text-grey-300;
+}

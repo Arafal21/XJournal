@@ -1,0 +1,1 @@
+export const adminSortCategories = ['user', 'user group', 'contact number'];

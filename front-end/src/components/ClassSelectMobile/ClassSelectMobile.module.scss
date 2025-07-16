@@ -1,0 +1,14 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins' as *;
+
+.classesContainer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+
+	.classItem {
+		@include header-3-600;
+		color: $text-grey-300;
+	}
+}

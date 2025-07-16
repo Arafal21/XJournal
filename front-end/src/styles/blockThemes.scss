@@ -1,0 +1,59 @@
+@use './variables.scss' as *;
+@use './mixins.scss' as *;
+
+.white {
+	@include white-gradient;
+
+	.themeTextColor {
+		color: $text-grey-300;
+	}
+}
+
+.dark-green {
+	@include dark-green-gradient;
+
+	.themeTextColor {
+		color: $text-grey-50;
+	}
+}
+
+.mustard {
+	@include mustard-gradient;
+}
+
+.pink {
+	@include pink-gradient;
+}
+
+.blue {
+	@include blue-gradient;
+}
+
+.light-green {
+	@include light-green-gradient;
+}
+
+.violet {
+	@include violet-gradient;
+}
+
+.mustard,
+.pink,
+.blue,
+.light-green,
+.violet {
+	.themeTextColor {
+		color: $text-grey-50;
+	}
+}
+
+.mustard,
+.pink,
+.blue,
+.dark-green,
+.light-green,
+.violet {
+	.themeTextColor {
+		color: $text-grey-50;
+	}
+}

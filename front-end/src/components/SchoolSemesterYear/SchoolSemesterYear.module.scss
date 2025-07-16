@@ -1,0 +1,35 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins' as *;
+
+.btnContainer {
+	width: 100%;
+}
+
+.text {
+	color: $text-grey-300;
+}
+
+.semesterBtn {
+	@include header-3-600;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+@media (width >= 768px) {
+	.btnContainer {
+		width: auto;
+	}
+
+	.semesterBtn {
+		@include header-3-400;
+		padding: $vertical-padding-sm $horizontal-padding-md;
+		border-radius: $corner-radius-sm;
+		border: 1px solid $light-hover;
+		background-color: $white-300;
+	}
+
+	.text {
+		margin: 0 $spacing-lg;
+	}
+}

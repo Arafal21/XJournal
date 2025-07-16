@@ -1,0 +1,56 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins' as *;
+@use '../../styles/z-indexes.scss' as *;
+
+.subjectsHeading {
+	@include body-400;
+	margin-bottom: $spacing-lg;
+	color: $text-grey-300;
+}
+
+.subjectsContainer {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+
+	.subjectItem {
+		@include body-2-400;
+		width: 50%;
+		color: $text-grey-300;
+		margin-bottom: $spacing-2xl;
+
+		// Remove the bottom margin of the last two elements (the last row every in columns)
+		&:nth-last-child(-n + 2) {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@media (width >= 768px) {
+	.subjectsHeading {
+		@include header-3-400;
+		margin-bottom: $spacing-2xl;
+	}
+
+	.subjectsContainer {
+		display: flex;
+		flex-wrap: wrap;
+		width: 100%;
+
+		.subjectItem {
+			@include body-400;
+			width: auto;
+			margin-right: $spacing-2xl;
+			margin-bottom: auto;
+			padding: $vertical-padding-md $horizontal-padding-lg;
+
+			&:nth-last-child(-n + 2) {
+				margin-bottom: auto;
+			}
+
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
+	}
+}

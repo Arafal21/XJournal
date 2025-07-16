@@ -1,0 +1,14 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins' as *;
+
+.subjectContainer {
+	margin: $spacing-2xl 0;
+}
+
+@media (width <= 768px) {
+	.subjectContainer {
+		max-width: 100%;
+		overflow: auto;
+		white-space: nowrap;
+	}
+}

@@ -1,0 +1,32 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins' as *;
+@use '../../../styles/z-indexes.scss' as *;
+
+.actionMenu {
+	position: fixed;
+	z-index: $MODAL-HEADER;
+
+	padding: 0 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	background-color: $white-300;
+	border-bottom: 1px solid $light-hover;
+
+	.heading {
+		@include header-3-600;
+		color: $text-grey-300;
+		padding: 1.25rem 0;
+	}
+
+	.blank {
+		height: 2.75rem;
+		width: 2.75rem;
+		display: block;
+	}
+}
+
+.marginBottom {
+	margin-bottom: $spacing-5xl;
+}

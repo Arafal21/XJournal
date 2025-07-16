@@ -1,0 +1,13 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins' as *;
+@use '../../../styles/z-indexes.scss' as *;
+
+.monthlyBtn {
+	@include button-600;
+	color: $text-grey-300;
+	padding: $vertical-padding-md $horizontal-padding-lg;
+	border-radius: $corner-radius-xs;
+	border: 1px solid $light-hover;
+	background-color: $white-50;
+	box-shadow: $shadow-s-black;
+}

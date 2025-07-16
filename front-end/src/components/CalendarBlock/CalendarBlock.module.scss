@@ -1,0 +1,106 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins' as *;
+@use '../../styles/z-indexes.scss' as *;
+
+.emptyBlock {
+	border: 1px solid $text-grey-200;
+	transition: background-color 0.3s;
+	color: $text-grey-300;
+	font-weight: $font-weight-bold;
+
+	&:hover {
+		background-color: $light;
+	}
+}
+
+.examBlock {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: $vertical-padding-md $horizontal-padding-lg;
+	border-radius: $corner-radius-xs;
+	margin-bottom: $spacing-lg;
+	cursor: pointer;
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+
+	.examInfo {
+		display: flex;
+
+		.hours {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+
+			.examTime:first-of-type {
+				margin-bottom: $spacing-xxs;
+			}
+		}
+
+		.examDetails {
+			padding: $horizontal-padding-lg;
+		}
+	}
+}
+
+@media (width >= 992px) {
+	.examBlock {
+		@include truncate-600;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		border-radius: $corner-radius-sm;
+		margin-top: $spacing-xs;
+		padding: $vertical-padding-xs $horizontal-padding-sm;
+		margin-bottom: 0;
+		width: 100%;
+
+		.examInfo {
+			width: 90%;
+
+			.hours {
+				display: none;
+			}
+
+			.examDetails {
+				padding: 0;
+				white-space: nowrap;
+
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
+		}
+	}
+}
+
+.forceMobileStyles {
+	@media (width >= 992px) {
+		@include body-400;
+		display: flex;
+		justify-content: space-between;
+		border-radius: $corner-radius-xs;
+		padding: $vertical-padding-md $horizontal-padding-lg;
+		margin-bottom: $spacing-lg;
+
+		.hours {
+			display: flex;
+			flex-direction: column;
+		}
+
+		.examInfo {
+			.hours {
+				display: block;
+			}
+
+			.examDetails {
+				padding: $horizontal-padding-lg;
+				white-space: normal;
+				overflow: visible;
+				text-overflow: clip;
+			}
+		}
+	}
+}

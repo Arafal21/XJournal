@@ -1,0 +1,37 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins' as *;
+@use '../../../styles/z-indexes.scss' as *;
+
+.openModalBtn {
+	background-color: $normal;
+	padding: $vertical-padding-lg $horizontal-padding-lg;
+	border-radius: 50%;
+	width: 3.5rem;
+	height: 3.5rem;
+	position: fixed;
+	bottom: 5.75rem;
+	left: 1.75rem;
+
+	.btnText {
+		display: none;
+	}
+}
+
+@media (width >= 768px) {
+	.openModalBtn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		left: auto;
+		bottom: 1.5rem;
+		border-radius: $corner-radius-xs;
+		width: 10.75rem;
+
+		.btnText {
+			@include button-600;
+			display: block;
+			margin-right: $spacing-sm;
+			color: $text-grey-50;
+		}
+	}
+}

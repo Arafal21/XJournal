@@ -1,0 +1,68 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins' as *;
+@use '../../../styles/z-indexes.scss' as *;
+
+.block {
+	margin-bottom: 0.5rem;
+	width: 100%;
+}
+
+@media (width >= 768px) {
+	.block:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+.scheduledBlock {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	border-radius: $corner-radius-sm;
+	padding: $vertical-padding-md $horizontal-padding-lg;
+	min-height: 6rem;
+
+	.subject {
+		@include body-2-700;
+	}
+
+	.time {
+		margin: $spacing-xs 0;
+	}
+
+	.time,
+	.person {
+		@include body-2-400;
+	}
+}
+
+.empty {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: $corner-radius-sm;
+	border: 1px solid $text-grey-50;
+	background: $white-50;
+	box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.08);
+	opacity: 0;
+	transition: opacity 0.3s;
+	cursor: auto;
+
+	&:not(:disabled) {
+		cursor: pointer;
+
+		&:hover,
+		&:focus {
+			opacity: 1;
+		}
+	}
+
+	.emptyText {
+		@include button-600;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: $text-grey-300;
+		height: 6rem;
+	}
+}

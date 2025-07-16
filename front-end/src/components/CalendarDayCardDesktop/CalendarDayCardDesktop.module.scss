@@ -1,0 +1,52 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins' as *;
+@use '../../styles/z-indexes.scss' as *;
+
+@media (width >= 768px) {
+	.block {
+		@include calendarBlockDesktop;
+
+		&:hover {
+			background-color: $white-50;
+			box-shadow: 0px 8px 40px 0px rgba(30, 30, 30, 0.08);
+		}
+
+		.dayContainer {
+			display: flex;
+			justify-content: flex-end;
+			width: 100%;
+			color: $text-grey-300;
+		}
+
+		.examContainer {
+			display: flex;
+			justify-content: flex-end;
+			height: 100%;
+			max-height: 5.55rem;
+			flex-direction: column;
+			padding: $vertical-padding-xs $horizontal-padding-lg;
+		}
+	}
+
+	// Remove the right border for the last element in each row
+	.block:nth-child(5n) {
+		border-right: none;
+	}
+
+	// Remove the bottom border for the last row elements
+	.block:nth-last-child(-n + 5) {
+		border-bottom: none;
+	}
+}
+
+.activeDay {
+	@include body-600;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: $text-grey-50;
+	border-radius: 3rem;
+	background-color: $green-500;
+	width: 2rem;
+	height: 2rem;
+}

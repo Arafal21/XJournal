@@ -1,0 +1,24 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins' as *;
+@use '../../styles/z-indexes.scss' as *;
+
+@media (width >= 768px) {
+	.form {
+		padding: $spacing-2xl $horizontal-padding-2xl;
+		width: 100%;
+		
+		// scrollbar on right
+		overflow-y: auto;
+
+		.error {
+			color: $warning-500;
+		}
+	}
+
+	.btnContainer {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		margin-top: $spacing-2xl;
+	}
+}

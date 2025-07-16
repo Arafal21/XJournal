@@ -1,0 +1,57 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins' as *;
+@use '../../styles/z-indexes.scss' as *;
+
+@media (width >= 768px) {
+	.calendarContainer {
+		width: 100%;
+
+		.calendarControlContainer {
+			display: flex;
+			align-items: center;
+			margin: $spacing-2xl 0;
+			padding: 0 $horizontal-padding-2xl;
+
+			.monthlyScheduleBtnWrapper {
+				margin-left: $spacing-2xl;
+			}
+		}
+
+		.schoolDaysContainer {
+			display: flex;
+			margin-bottom: $spacing-sm;
+
+			.schoolDay {
+				@include body-400;
+				text-align: center;
+				color: $text-grey-300;
+				width: 25%;
+			}
+		}
+
+		.calendar {
+			display: flex;
+			flex-wrap: wrap;
+
+			.block {
+				@include calendarBlockDesktop;
+
+				&:hover {
+					background-color: $white-50;
+					box-shadow: 0px 8px 40px 0px rgba(30, 30, 30, 0.08);
+				}
+			}
+			
+		
+			// Remove the right border for the last element in each row
+			.block:nth-child(5n) {
+				border-right: none;
+			}
+
+			// Remove the bottom border for the last row elements
+			.block:nth-last-child(-n + 5) {
+				border-bottom: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,27 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins' as *;
+@use '../../styles/z-indexes.scss' as *;
+
+.activityTitle,
+.lastLoginInfo {
+	color: $text-grey-300;
+}
+
+.activityTitle {
+	@include body-400;
+	margin-bottom: $spacing-2xl;
+}
+
+.lastLoginInfo {
+	@include body-2-400;
+}
+
+@media (width >= 768px) {
+	.activityTitle {
+		@include header-3-400;
+	}
+
+	.lastLoginInfo {
+		@include body-400;
+	}
+}

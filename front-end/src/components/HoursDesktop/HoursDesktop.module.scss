@@ -1,0 +1,37 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins' as *;
+@use '../../styles/z-indexes.scss' as *;
+
+.column {
+	width: 100%;
+
+	.hours {
+		.hour {
+			@include body-2-400;
+			color: $text-grey-300;
+			margin-bottom: 5rem;
+			height: $horizontal-padding-2xl;
+			padding-right: $horizontal-padding-2xl;
+		}
+
+		.hour:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}
+
+@media (width >=768px) {
+	.column {
+		width: auto;
+	}
+
+	.blank {
+		width: 1.875rem;
+		height: 3rem;
+	}
+
+	.desktopItems:last-of-type {
+		margin-right: 0px;
+	}
+
+}

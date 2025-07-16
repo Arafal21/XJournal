@@ -1,0 +1,40 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins' as *;
+@use '../../styles/z-indexes.scss' as *;
+
+.profileName {
+	@include body-600;
+	color: $text-grey-300;
+}
+
+.roleAndClass {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: $spacing-lg;
+
+	.profileRole,
+	.profileClass {
+		@include body-2-400;
+		color: $text-grey-300;
+	}
+}
+
+@media (width >= 768px) {
+	.profileName {
+		@include header-3-600;
+	}
+
+	.roleAndClass {
+		margin-left: $spacing-lg;
+
+		.profileRole {
+			@include body-400;
+			margin: $spacing-sm 0;
+		}
+
+		.profileClass {
+			@include body-2-400;
+		}
+	}
+}

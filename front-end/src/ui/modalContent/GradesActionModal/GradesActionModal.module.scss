@@ -1,0 +1,63 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins' as *;
+@use '../../../styles/z-indexes.scss' as *;
+
+.modalContent {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow: hidden;
+
+	.subject {
+		@include body-400;
+		margin: $spacing-3xl 0 $spacing-sm;
+		color: $text-grey-300;
+	}
+	.createdInfo {
+		display: flex;
+		align-items: center;
+		margin-bottom: 2rem;
+
+		.name {
+			margin-left: $spacing-lg;
+			color: $text-grey-300;
+		}
+	}
+
+	.gradeSelectContainer {
+		display: grid;
+		grid-template-columns: repeat(4, 3rem);
+		grid-auto-rows: 3rem;
+		gap: $spacing-2xl;
+		justify-content: center;
+	}
+}
+
+@media (width <= 767px) {
+	.modalContent {
+		.gradeSelectContainer > :nth-child(5) {
+			grid-column-start: 2;
+		}
+		.gradeSelectContainer > :nth-child(6) {
+			grid-column-start: 3;
+		}
+
+		.buttonContainer {
+			width: 100%;
+			padding: 0 $horizontal-padding-lg;
+		}
+	}
+}
+
+@media (width >= 768px) {
+	.modalContent {
+		.gradeSelectContainer {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			max-width: 100%;
+			width: 100%;
+			padding: 0 $horizontal-padding-2xl;
+		}
+	}
+}

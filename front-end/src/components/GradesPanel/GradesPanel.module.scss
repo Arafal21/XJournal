@@ -1,0 +1,32 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins' as *;
+
+.reverse {
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: center;
+	align-items: center;
+}
+
+.line {
+	display: none;
+}
+
+@media (width >= 768px) {
+	.menu {
+		border-radius: $corner-radius-lg;
+		border: 1px solid $light-hover;
+		padding: $vertical-padding-2xl $horizontal-padding-2xl;
+	}
+
+	.reverse {
+		justify-content: start;
+		align-items: start;
+	}
+	.line {
+		display: block;
+		height: 1px;
+		background-color: $light-hover;
+		margin-bottom: $spacing-2xl;
+	}
+}

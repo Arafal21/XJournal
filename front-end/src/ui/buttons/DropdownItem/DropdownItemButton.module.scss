@@ -1,0 +1,51 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins' as *;
+@use '../../../styles/z-indexes.scss' as *;
+
+.dropdown {
+	min-width: 23rem;
+	position: relative;
+	display: flex;
+
+	.activeBorder {
+		border: 1px solid $green-500;
+	}
+
+	.menu {
+		position: absolute;
+		top: 3.5rem;
+		left: 50%;
+		width: 100%;
+		transform: translateX(-50%);
+		z-index: $DROPDOWN-ITEM;
+		box-shadow: $shadow-m-black;
+		margin-top: 0.5rem;
+		border: 1px solid $green-50;
+
+		.menuItem {
+			padding: $horizontal-padding-md $vertical-padding-lg;
+			cursor: pointer;
+			background-color: $white-50;
+			color: $text-grey-300;
+
+			&:hover {
+				background-color: $green-50;
+			}
+
+			&:focus {
+				outline: 2px solid $green-500;
+				outline-offset: 2px;
+			}
+		}
+
+		.active {
+			border-left: $stroke-md solid $green-500;
+		}
+	}
+}
+
+.limitedDropdown {
+	max-width: 10rem;
+	width: 100%;
+	min-width: 10rem;
+}

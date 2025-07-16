@@ -1,0 +1,33 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins' as *;
+@use '../../styles/z-indexes.scss' as *;
+
+.profileCard {
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid $light-hover;
+	padding-bottom: $vertical-padding-lg;
+}
+
+.yourSubjects {
+	border-bottom: 1px solid $light-hover;
+	padding: $spacing-lg 0;
+}
+
+.lastActivity {
+	margin: $spacing-lg 0;
+}
+
+@media (width >= 768px) {
+	.profileCard {
+		padding-bottom: $vertical-padding-2xl;
+	}
+
+	.yourSubjects {
+		padding: $spacing-2xl 0;
+	}
+
+	.lastActivity {
+		margin: $spacing-2xl 0;
+	}
+}

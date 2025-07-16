@@ -1,0 +1,14 @@
+.row {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+}
+
+@media (width >= 768px) {
+	.row {
+		align-items: start;
+		flex-direction: row;
+		width: auto;
+	}
+}

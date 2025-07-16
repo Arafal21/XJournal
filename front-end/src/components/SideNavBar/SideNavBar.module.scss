@@ -1,0 +1,98 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins' as *;
+@use '../../styles/z-indexes.scss' as *;
+
+.nav {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background-color: $white-50;
+	width: 100%;
+	border-radius: 1rem 1rem 0 0;
+	box-shadow: 5px 5px 5px 5px $secondary-grey-600;
+	z-index: $SIDE-NAV-BAR;
+
+	.primaryItems {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 5rem;
+		padding: 0 1.25rem;
+
+		.navHeading {
+			display: none;
+		}
+	}
+}
+
+@media (width >= 768px) {
+	.nav {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100vh;
+		width: auto;
+		box-shadow: 0 0 0 0;
+		border-top-right-radius: 0;
+		border-top-left-radius: 0;
+		border-right: 1px solid $light-hover;
+		padding: $vertical-padding-2xl $horizontal-padding-2xl;
+
+		.primaryItems {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: center;
+			height: auto;
+			width: 100%;
+			padding: 0;
+
+			.navHeading {
+				display: block;
+
+				.personalInfo {
+					display: flex;
+					align-items: center;
+					padding: 1.5rem 0;
+					width: 100%;
+
+					.avatarImg {
+						margin: $spacing-sm;
+					}
+
+					.userInfo {
+						display: flex;
+						flex-direction: column;
+						justify-content: space-between;
+						height: 3rem;
+
+						.name {
+							line-height: $font-size-xl;
+							font-weight: $font-weight-regular;
+							font-size: $font-size-md;
+							color: $text-grey-300;
+						}
+
+						.role {
+							line-height: $font-size-md;
+							font-weight: $font-weight-regular;
+							font-size: $font-size-sm;
+							color: $text-grey-300;
+						}
+					}
+				}
+			}
+
+		}
+	}
+
+	.linkText {
+		padding-left: $spacing-sm;
+	}
+
+	.lowerDesktopItems {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}

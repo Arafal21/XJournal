@@ -1,0 +1,26 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins' as *;
+@use '../../../styles/z-indexes.scss' as *;
+
+.allUsersBtn {
+    @include body-400;
+	text-align: center;
+	padding: $vertical-padding-xs $horizontal-padding-lg;
+    border-radius: $corner-radius-md;
+	background-color: $white-50;
+    color: $text-grey-300;
+	
+	
+	.line {
+		width: 100%;
+		height: 1px;
+		background-color: $text-grey-300;
+        margin: $spacing-xs 0;
+	}
+}
+
+.active {
+	@include body-600;
+	background-color: $white-300;
+	border: 1px solid $light-hover;
+}

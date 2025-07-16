@@ -1,0 +1,11 @@
+.hiddenOnMobile {
+	@media (width <= 767px) {
+		display: none !important;
+	}
+}
+
+.hiddenOnDesktop {
+	@media (width >= 768px) {
+		display: none !important;
+	}
+}

@@ -1,0 +1,75 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins' as *;
+@use '../../../styles/z-indexes.scss' as *;
+
+.modalContent {
+	overflow-y: auto;
+
+	.actionMenu {
+		padding: 0 1rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		background-color: $white-300;
+		border-top-left-radius: $corner-radius-lg;
+		border-top-right-radius: $corner-radius-lg;
+
+		.heading {
+			@include header-3-600;
+			color: $text-grey-300;
+			padding: 1.25rem 0;
+		}
+	}
+
+	.when {
+		text-align: center;
+		margin: $spacing-7xl 0 $spacing-3xl;
+
+		.day,
+		.hour {
+			color: $text-grey-300;
+		}
+
+		.day {
+			@include body-400;
+			margin-bottom: $spacing-sm;
+		}
+
+		.hour {
+			@include body-2-400;
+		}
+	}
+
+	.closeModalBtn {
+		background-color: $normal;
+		padding: $vertical-padding-xl $vertical-padding-2xl;
+		border-radius: $corner-radius-2xl;
+		color: $text-grey-50;
+		width: 95%;
+		margin: $spacing-2xl 0;
+	}
+}
+
+.buttonContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 $horizontal-padding-lg;
+}
+
+.schoolSubjectsContainer {
+	padding: $horizontal-padding-lg;
+}
+
+@media (width >= 768px) {
+	.closeModalBtn {
+		width: 12rem;
+		border-radius: $corner-radius-xs;
+	}
+
+	.dropdownMenuSelectSubjectContainer {
+		display: block;
+		padding: 0 $horizontal-padding-2xl;
+	}
+}

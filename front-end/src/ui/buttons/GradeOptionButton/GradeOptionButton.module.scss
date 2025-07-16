@@ -1,0 +1,20 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins' as *;
+@use '../../../styles/z-indexes.scss' as *;
+
+.gradeItemBtn {
+	@include body-400;
+	border-radius: $corner-radius-sm;
+	border: 1px solid $text-grey-50;
+	background-color: $white-300;
+	color: $text-grey-300;
+	padding: 0.75rem;
+	width: 3rem;
+	height: 3rem;
+}
+
+
+.gradeActive {
+	background-color: $green-500;
+	color: $text-grey-50;
+}

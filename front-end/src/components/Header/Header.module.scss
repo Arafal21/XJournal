@@ -1,0 +1,57 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins' as *;
+@use '../../styles/z-indexes.scss' as *;
+
+.header {
+	display: flex;
+	flex-direction: column-reverse;
+
+	.schoolOrClass {
+		@include header-2-700;
+		color: $text-grey-300;
+		margin: 0.5rem 0 0 1rem;
+	}
+
+	.select {
+		display: none;
+	}
+}
+
+@media (width >= 768px) {
+	.header {
+		display: flex;
+		margin-top: 5rem;
+		position: relative;
+		z-index: $HEADER-LAYER;
+
+		.container {
+			display: block;
+			position: fixed;
+			top: 0;
+			display: flex;
+			width: 100%;
+			height: 5rem;
+			background-color: $white-50;
+			border-bottom: $stroke-xs solid $light-hover;
+
+			.wrapper {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				max-width: 100rem;
+				width: calc(100vw - 12.25rem);
+				padding: 0 $vertical-padding-2xl;
+				margin-left: 12.25rem;
+
+				.schoolOrClass {
+					@include header-3-400;
+					margin: 0;
+				}
+
+				.select {
+					display: block;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,46 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins' as *;
+@use '../../../styles/z-indexes.scss' as *;
+
+.signUpMobile {
+	@include button-600;
+	margin-top: $spacing-2xl;
+	padding: $vertical-padding-xl;
+	color: $text-grey-300;
+	transition: color 0.3s;
+
+	&:hover {
+		color: $text-grey-200;
+	}
+}
+
+.forgotPassword {
+	@include body-2-700;
+	margin-bottom: 8rem;
+	color: $green-500;
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+@media (width >= 992px) {
+	.signUpMobile {
+		display: none;
+	}
+
+	.signUpDesktop {
+		@include body-2-700;
+		color: $green-500;
+		padding: $vertical-padding-lg $horizontal-padding-xs;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.forgotPassword {
+		margin-bottom: $spacing-lg;
+		padding: $vertical-padding-lg $horizontal-padding-xs;
+	}
+}

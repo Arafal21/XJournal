@@ -1,0 +1,10 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins' as *;
+@use '../../../styles/z-indexes.scss' as *;
+
+.mobileExtendBtn {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: $text-grey-300;
+}

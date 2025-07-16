@@ -1,0 +1,55 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins' as *;
+@use '../../styles/z-indexes.scss' as *;
+
+.modalContainer {
+	z-index: $INFO-MODAL;
+	position: fixed;
+
+	&.active {
+		.overlay {
+			opacity: 1;
+			pointer-events: auto;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
+		.modalOpened {
+			opacity: 1;
+			pointer-events: auto;
+			transform: translate(0, -50%) scale(1);
+		}
+	}
+
+	.modalOpened {
+		position: fixed;
+		right: 1.5rem;
+		top: 50%;
+		transform: translate(0, -50%);
+		box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+		max-width: 28rem;
+
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+		background-color: $white-50;
+		border-radius: $corner-radius-lg;
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.3s ease, transform 0.3s ease;
+		transform: translate(0, -50%) scale(1.2);
+	}
+
+	.overlay {
+		position: fixed;
+		height: 100%;
+		width: 100%;
+		background: rgba(0, 0, 0, 0.3);
+		backdrop-filter: blur(5px);
+		opacity: 0;
+		pointer-events: none;
+	}
+}

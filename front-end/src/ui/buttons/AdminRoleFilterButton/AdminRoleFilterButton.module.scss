@@ -1,0 +1,20 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins' as *;
+@use '../../../styles/z-indexes.scss' as *;
+
+.adminFilterBtn {
+	@include body-400;
+	color: $text-grey-300;
+	padding: $vertical-padding-xs $horizontal-padding-lg;
+	height: 3rem;
+	margin-left: $spacing-lg;
+	display: flex;
+	align-items: center;
+}
+
+.activeBtn {
+	@include body-600;
+	border-radius: $corner-radius-md;
+	border: 1px solid $light-hover;
+	background-color: $white-300;
+}

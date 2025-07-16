@@ -1,0 +1,106 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins' as *;
+@use '../../styles/z-indexes.scss' as *;
+
+.modalContainer {
+	position: fixed;
+	z-index: $MODAL-CONTAINER-TABLET-DESKTOP;
+	top: 0;
+	left: 0;
+
+	.overlay {
+		position: fixed;
+		height: 100%;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.3);
+		backdrop-filter: blur(5px);
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	&.active {
+		.overlay {
+			opacity: 1;
+			pointer-events: auto;
+		}
+
+		.modalOpened {
+			opacity: 1;
+			pointer-events: auto;
+			transform: translate(-50%, -50%) scale(1);
+			border-radius: $corner-radius-lg $corner-radius-lg 0 0;
+			width: 100%;
+		}
+	}
+
+	.modalOpened {
+		position: fixed;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%) scale(1.2);
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.3s ease, transform 0.3s ease;
+		background-color: $white-50;
+		width: 20rem;
+
+		// scrollbar on right
+		overflow: hidden;
+	}
+}
+
+// ###############
+// position & animation
+
+@media (width >= 768px) {
+	.modalContainer {
+		&.active {
+			.modalOpened {
+				width: 28.5rem;
+				border-radius: $corner-radius-lg;
+			}
+		}
+	}
+
+	.modalOpened {
+		width: 28.5rem;
+	}
+}
+
+@media (min-width: 768px) {
+	.modalContainer {
+		.modalOpened {
+			top: -100%;
+			left: 50%;
+			transform: translateX(-50%) scale(1.2);
+			opacity: 0;
+			transition: top 0.6s ease, transform 0.6s ease, opacity 0.6s ease;
+		}
+
+		&.active {
+			.modalOpened {
+				top: 50%;
+				transform: translate(-50%, -50%) scale(1);
+				opacity: 1;
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.modalContainer {
+		.modalOpened {
+			top: auto;
+			bottom: -101%;
+			transform: translateX(-50%) scale(1.2);
+			transition: bottom 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+		}
+
+		&.active {
+			.modalOpened {
+				bottom: 0;
+				transform: translateX(-50%) scale(1);
+			}
+		}
+	}
+}

@@ -1,0 +1,28 @@
+.footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 1.5rem 0;
+	background-color: #333;
+
+	.text {
+		color: #fff;
+		font-size: 0.75rem;
+
+		.link {
+			font-weight: 700;
+			color: #65db6f;
+
+			&:hover {
+				color: #9ffda6;
+			}
+		}
+	}
+}
+
+@media (width >= 768px) {
+	.footer {
+		background-color: #000;
+		margin-bottom: 0;
+	}
+}

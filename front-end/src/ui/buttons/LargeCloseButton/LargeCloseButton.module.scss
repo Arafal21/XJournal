@@ -1,0 +1,17 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins' as *;
+@use '../../../styles/z-indexes.scss' as *;
+
+.closeModalBtn {
+	@include button-600;
+	margin-top: 1rem;
+	background-color: $normal;
+	color: $text-grey-50;
+	padding: $vertical-padding-md $horizontal-padding-lg;
+	border-radius: $corner-radius-xs;
+	width: 12rem;
+
+	&:hover {
+		background-color: $normal-hover;
+	}
+}

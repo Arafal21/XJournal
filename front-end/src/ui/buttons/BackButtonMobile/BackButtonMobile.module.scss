@@ -1,0 +1,14 @@
+@use '../../../styles/variables.scss' as *;
+@use '../../../styles/mixins' as *;
+@use '../../../styles/z-indexes.scss' as *;
+
+.backBtnMobile {
+	display: flex;
+	align-items: center;
+
+	.backBtnText {
+		@include button-600;
+		color: $text-grey-300;
+		margin-left: $spacing-xs;
+	}
+}

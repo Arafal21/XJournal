@@ -1,0 +1,31 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins' as *;
+@use '../../styles/z-indexes.scss' as *;
+
+.user {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+
+	.nameAndRole {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin-top: $spacing-sm;
+		width: 100%;
+		white-space: normal;
+		overflow-wrap: break-word;
+
+
+		.role {
+			margin-top: $spacing-xs;
+		}
+
+		.role,
+		.name {
+			@include body-2-400;
+			color: $text-grey-300;
+		}
+	}
+}

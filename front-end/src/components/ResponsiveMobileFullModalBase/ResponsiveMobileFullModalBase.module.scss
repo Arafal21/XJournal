@@ -1,0 +1,72 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins' as *;
+@use '../../styles/z-indexes.scss' as *;
+
+.modalContainer {
+	position: fixed;
+	z-index: $MODAL-CONTAINER-MOBILE;
+	top: 0;
+	left: 0;
+
+	.overlay {
+		position: fixed;
+		height: 100%;
+		width: 100%;
+		background-color: $white-300;
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	&.active {
+		.overlay {
+			opacity: 1;
+			pointer-events: auto;
+		}
+
+		.modalOpened {
+			opacity: 1;
+			pointer-events: auto;
+			transform: translate(-50%, -50%) scale(1);
+		}
+	}
+
+	.modalOpened {
+		position: fixed;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.modalOpened {
+		display: flex;
+		justify-content: flex-end;
+		flex-direction: column;
+		transform: translate(-50%, -50%) scale(1.2);
+		height: 100%;
+		width: calc(100% - 2rem);
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity 0.3s ease, transform 0.3s ease;
+		background-color: $white-300;
+	}
+}
+
+@media (width >= 768px) {
+	.modalContainer {
+		z-index: $MODAL-CONTAINER-TABLET-DESKTOP;
+
+		.overlay {
+			background-color: rgba(0, 0, 0, 0.3);
+			backdrop-filter: blur(5px);
+		}
+
+		.modalOpened {
+			height: auto;
+			max-width: 51.75rem;
+			align-items: center;
+			justify-content: flex-start;
+			padding: 0 $horizontal-padding-2xl;
+			border-radius: $corner-radius-lg;
+		}
+	}
+}
