@@ -13,7 +13,7 @@
 
 ## 🔥 1. Quick start
 
-### Live: [https://x-journal-cv.vercel.app/](https://x-journal-cv.vercel.app/)
+### Live: [https://www.xjournal.site](xjournal.site)
 
 ### Repository: [https://github.com/Arafal21/XJournal](https://github.com/Arafal21/XJournal)
 
@@ -54,7 +54,7 @@ For all user data, please open the allLoginData.txt file or click: https://githu
 
 ### Sorry, this is not yet available.
 
-Temporarily, the application is available only through live: [https://nodejs.org/en](https://nodejs.org/en) and available code to the [https://github.com/Arafal21/XJournal](https://github.com/Arafal21/XJournal).
+Temporarily, the application is available only through live: [https://www.https://www.xjournal.site](xjournal.site) and available code to the [https://github.com/Arafal21/XJournal](https://github.com/Arafal21/XJournal).
 
 #### Soon:
 
