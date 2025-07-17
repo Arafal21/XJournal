@@ -7,13 +7,11 @@ export const metadata = {
 };
 
 interface PrincipalPanelRouteProps {
-	params: {
-		filter: string;
-	};
+	params: Promise<{ filter: string }>;
 }
 
 export default async function PrincipalPanelRoute({ params }: PrincipalPanelRouteProps) {
-	const { filter } = await Promise.resolve(params);
+	const { filter } = await params;
 	
 	return <PrincipalPanelPage filter={filter} />;
 }

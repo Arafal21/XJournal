@@ -13,7 +13,7 @@
 
 ## 🔥 1. Quick start
 
-### Live: [https://nodejs.org/en](https://nodejs.org/en)
+### Live: [https://www.xjournal.site](https://www.xjournal.site)
 
 ### Repository: [https://github.com/Arafal21/XJournal](https://github.com/Arafal21/XJournal)
 
@@ -54,24 +54,34 @@ For all user data, please open the allLoginData.txt file or click: https://githu
 
 ### Sorry, this is not yet available.
 
-Temporarily, the application is available only through live: [https://nodejs.org/en](https://nodejs.org/en) and available code to the [https://github.com/Arafal21/XJournal](https://github.com/Arafal21/XJournal).
+Temporarily, the application is available only through live: [https://www.xjournal.site](https://www.xjournal.site) and available code to the [https://github.com/Arafal21/XJournal](https://github.com/Arafal21/XJournal).
 
 #### Soon:
 
-1. Backend docs (created by me):
+1. Backend docs :
 
--   <a href="https://docs.google.com/document/d/1MdI9QoDwhngwM1wAO1vbpod7Gj11JsOYuZLyMFbteVU/edit?usp=sharing">https://docs.google.com/document/d/1MdI9QoDwhngwM1wAO1vbpod7Gj11JsOYuZLyMFbteVU/edit?usp=sharing</a>
+-   <a href="https://www.google.com">Unavailable yet</a>
 
 2. Please fill /front-end/.env.local for your own:
 
 ```
-NEXT_PUBLIC_API_BASE_URL=
+NEXT_PUBLIC_API_BASE_URL=#FILL_HERE
 
+# principal
+TESTS_PRINCIPAL_EMAIL=#FILL_HERE
+TESTS_PRINCIPAL_PASSWORD=#FILL_HERE
+
+# teacher
+TESTS_TEACHER_EMAIL=#FILL_HERE
+TESTS_TEACHER_PASSWORD=#FILL_HERE
+
+# student
 TESTS_STUDENT_EMAIL=ethanmiller@xjournal.com
 TESTS_STUDENT_PASSWORD=123ethan456
 
-TESTS_PRINCIPAL_EMAIL=
-TESTS_PRINCIPAL_PASSWORD=
+# parent
+TESTS_PARENT_EMAIL=michaelmiller@xjournal.com
+TESTS_PARENT_PASSWORD=234michael567
 ```
 
 3. Fill in constants/classes.ts with your class IDs. (This will be automated later.)
@@ -332,10 +342,8 @@ Environment variables in .env.local
         -   [ ] 🗑 Deleting a grade
 -   [ ] **Admin Page** (allowed to principal only):
     -   [ ] Principal:
-        -   [ ] 👀 Displaying
-        -   [ ] ➕ Posting
-        -   [ ] 🖊 Editing
-        -   [ ] 🗑 Deleting
+        -   [ ] 👀 Displaying announcements
+        -   [x] ➕ Posting a new User | 🖊 Editing an existing User | 🗑 Deleting an existing user
 -   [ ] **Schedule Page**:
     -   [ ] Student's:
         -   [ ] 👀 Displaying lesson's schedule
