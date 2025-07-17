@@ -53,12 +53,11 @@ For all user data, please open the allLoginData.txt file or click: https://githu
 ## 🔥 2. Application running locally (no available yet)
 1. Backend docs - <a href="https://www.google.com">Unavailable yet</a>
 
-2. Please fill for your own:
-   a) /front-end/.env.local 
-   b) /back-end/.env
+2. Please fill for your own: `/front-end/.env.local` and `/back-end/.env`
 
-3. Fill in constants/classes.ts with your class IDs. (This will be automated later.)
-4. Copy the databases to your mongodb compass (placed in the /databases folder)
+3. Copy the database schema to your mongodb compass (placed in the /databases folder)
+4. Use a postman to create a user with role principal
+5. Fill in constants/classes.ts with your class IDs. (This will be automated later.)
 
 <br/>
 <br/>
