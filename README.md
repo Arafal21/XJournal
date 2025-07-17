@@ -13,7 +13,7 @@
 
 ## 🔥 1. Quick start
 
-### Live: [https://www.xjournal.site](xjournal.site)
+### Live: [https://www.xjournal.site](https://www.xjournal.site)
 
 ### Repository: [https://github.com/Arafal21/XJournal](https://github.com/Arafal21/XJournal)
 
