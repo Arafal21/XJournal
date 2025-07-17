@@ -31,7 +31,7 @@ Parent Michael Miller - email: michaelmiller@xjournal.com / password: 234michael
 # You can log in using a parent or student account.
 # For security reasons, teacher and principal credentials aren’t publicly shared in this demo.
 # If you’re a recruiter and would like to explore these roles, please get in touch —
-# I’ll reply promptly and provide all necessary passwords. Contact: BLANK@protonmail.com
+# I’ll reply promptly and provide all necessary passwords. Contact: rafaland21@protonmail.com
 
 ## principal (1 account)
 Principal Jason Carter: e-mail: jasoncarter@xjournal.com / password: BLANK
@@ -260,8 +260,8 @@ We use a special .srOnly class (“screen-reader only”) to keep the element in
 
 Thanks for your cooperation:
 
--   Backend developer: [BLANK](https://github.com/l4npl): Node.js + TypeScript + Express.js + MongoDB + Redis
--   Designer: [BLANK](https://uxfol.io/de179750): Figma
+-   Backend developer: [Bartosz Mielcarek](https://github.com/l4npl): Node.js + TypeScript + Express.js + MongoDB + Redis
+-   Designer: [Tomasz Łuczak](https://uxfol.io/de179750): Figma
 
 <br/>
 <br/>
