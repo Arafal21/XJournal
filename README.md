@@ -51,40 +51,14 @@ For all user data, please open the allLoginData.txt file or click: https://githu
 <br/>
 
 ## 🔥 2. Application running locally (no available yet)
+1. Backend docs - <a href="https://www.google.com">Unavailable yet</a>
 
-### Sorry, this is not yet available.
-
-Temporarily, the application is available only through live: [https://www.xjournal.site](https://www.xjournal.site) and available code to the [https://github.com/Arafal21/XJournal](https://github.com/Arafal21/XJournal).
-
-#### Soon:
-
-1. Backend docs :
-
--   <a href="https://www.google.com">Unavailable yet</a>
-
-2. Please fill /front-end/.env.local for your own:
-
-```
-NEXT_PUBLIC_API_BASE_URL=#FILL_HERE
-
-# principal
-TESTS_PRINCIPAL_EMAIL=#FILL_HERE
-TESTS_PRINCIPAL_PASSWORD=#FILL_HERE
-
-# teacher
-TESTS_TEACHER_EMAIL=#FILL_HERE
-TESTS_TEACHER_PASSWORD=#FILL_HERE
-
-# student
-TESTS_STUDENT_EMAIL=ethanmiller@xjournal.com
-TESTS_STUDENT_PASSWORD=123ethan456
-
-# parent
-TESTS_PARENT_EMAIL=michaelmiller@xjournal.com
-TESTS_PARENT_PASSWORD=234michael567
-```
+2. Please fill for your own:
+   a) /front-end/.env.local 
+   b) /back-end/.env
 
 3. Fill in constants/classes.ts with your class IDs. (This will be automated later.)
+4. Copy the databases to your mongodb compass (placed in the /databases folder)
 
 <br/>
 <br/>
