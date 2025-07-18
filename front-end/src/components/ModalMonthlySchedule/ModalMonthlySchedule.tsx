@@ -7,7 +7,7 @@ import { ClearModalHeader } from '../../ui/modalHeader/ClearModalHeading/ClearMo
 import { availableSubjects, subjectKeysForBackend, subjectThemeMap } from '../../constants/subjects';
 import { SelectedSubjectContext } from '../../contexts/SelectedSubjectContext';
 
-import { formatDateUTC } from '../../utils/formatDateUTC';
+import { formatUTCToLongDate } from '../../utils/formatUTCToLongDate';
 import { convertValue } from '../../utils/convertValue';
 
 import { CalendarEvent, SelectedExam } from '../../types/calendarProps';
@@ -37,7 +37,7 @@ export function ModalMonthlySchedule({
 			startDate: exam.startDate,
 		});
 
-		setSelectedSubject(exam.subject)
+		setSelectedSubject(exam.subject);
 	};
 
 	return (
@@ -52,7 +52,7 @@ export function ModalMonthlySchedule({
 
 						return (
 							<div className={styles.item} key={exam._id}>
-								<p className={styles.date}>{formatDateUTC(exam.startDate)}</p>
+								<p className={styles.date}>{formatUTCToLongDate(exam.startDate)}</p>
 
 								<CalendarBlock
 									subject={exam.subject}

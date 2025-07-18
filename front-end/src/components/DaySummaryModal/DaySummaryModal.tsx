@@ -7,10 +7,11 @@ import { CalendarBlock } from '../CalendarBlock/CalendarBlock';
 import { ModalActionButton } from '../../ui/buttons/ModalActionButton/ModalActionButton';
 import { ClearModalHeader } from '../../ui/modalHeader/ClearModalHeading/ClearModalHeader';
 import { CalendarEvent, SelectedExam } from '../../types/calendarProps';
-import { formatDateUTC } from '../../utils/formatDateUTC';
+
 import { convertValue } from '../../utils/convertValue';
 import { availableSubjects, subjectKeysForBackend, subjectThemeMap } from '../../constants/subjects';
 import { maxEventsPerDay } from '../../constants/calendar';
+import { formatUTCToLongDate } from '../../utils/formatUTCToLongDate';
 
 interface DaySummaryModalProps {
 	isTeacherOrPrincipal: boolean;
@@ -41,21 +42,23 @@ export function DaySummaryModal({
 	const isoDate = date.toISOString();
 
 	const eventsForDay = calendarData
+
 		.filter((exam) => {
-			const d = new Date(exam.startDate);
+			const day = new Date(exam.startDate);
 			return (
-				d.getUTCFullYear() === date.getUTCFullYear() &&
-				d.getUTCMonth() === date.getUTCMonth() &&
-				d.getUTCDate() === date.getUTCDate()
+				day.getUTCFullYear() === date.getUTCFullYear() &&
+				day.getUTCMonth() === date.getUTCMonth() &&
+				day.getUTCDate() === date.getUTCDate()
 			);
 		})
+
 		.sort((a, b) => new Date(a.startDate).getTime() - new Date(b.startDate).getTime());
 
 	const isFormValid = eventsForDay.length < maxEventsPerDay;
 
 	return (
 		<>
-			<ClearModalHeader>{formatDateUTC(isoDate)}</ClearModalHeader>
+			<ClearModalHeader>{formatUTCToLongDate(isoDate)}</ClearModalHeader>
 
 			<div className={styles.modalContent}>
 				<div className={styles.items}>

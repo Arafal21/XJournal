@@ -2,7 +2,7 @@
 
 import styles from './CalendarBlock.module.scss';
 
-import { formatTimeUTC } from '../../utils/formatTimeUTC';
+import { formatUTCToHour } from '../../utils/formatUTCToHour';
 import { convertValue } from '../../utils/convertValue';
 
 import { availableExams, examsKeysForBackend } from '../../constants/calendar';
@@ -42,8 +42,8 @@ export function CalendarBlock({
 			<div className={styles.examInfo}>
 				{!empty && (
 					<div className={styles.hours}>
-						<p className={`${styles.examTime} themeTextColor`}>{formatTimeUTC(start)}</p>
-						<p className={`${styles.examTime} themeTextColor`}>{formatTimeUTC(end)}</p>
+						<p className={`${styles.examTime} themeTextColor`}>{formatUTCToHour(start)}</p>
+						<p className={`${styles.examTime} themeTextColor`}>{formatUTCToHour(end)}</p>
 					</div>
 				)}
 
@@ -57,9 +57,7 @@ export function CalendarBlock({
 				)}
 			</div>
 
-			<div className={styles.editOption}>
-				{editButton && <EditIcon className="themeTextColor" />}
-			</div>
+			<div className={styles.editOption}>{editButton && <EditIcon className='themeTextColor' />}</div>
 		</button>
 	);
 }

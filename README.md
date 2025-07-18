@@ -123,7 +123,7 @@ We use a special .srOnly class (“screen-reader only”) to keep the element in
     -   [x] Allow principals and teachers to create, edit, and delete announcements.
     -   [x] Modal dialog for roles authorized to manage announcements.
     -   [x] Display author and timestamp.
-    -   [x] Display all dates in US format (MM/DD/YYYY) via `formatDateWithToday`
+    -   [x] Display all dates in US format (MM/DD/YYYY) via `formatUTCToLongDate`
 
 <hr/>
 

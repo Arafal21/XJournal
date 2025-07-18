@@ -10,22 +10,27 @@ import { NextButton } from '../../ui/buttons/NextButton/NextButton';
 import { useRouteNavigation } from '../../hooks/useRouteNavigation';
 
 export function ClassSelectMobile() {
-	const classNames = useClassNames();
 	const { navigateToGrades, selectedClass } = useRouteNavigation();
+	
+	const classNames = useClassNames();
 
 	const currentIndex = classNames.findIndex((c) => c === selectedClass);
 
 	const handlePrevious = () => {
 		if (classNames.length === 0) return;
+
 		const prevIndex = (currentIndex - 1 + classNames.length) % classNames.length;
 		const newClass = classNames[prevIndex];
+		
 		navigateToGrades({ className: newClass });
 	};
 
 	const handleNext = () => {
-		if (classNames.length === 0) return;
+		if (!classNames.length) return;
+
 		const nextIndex = (currentIndex + 1) % classNames.length;
 		const newClass = classNames[nextIndex];
+
 		navigateToGrades({ className: newClass });
 	};
 

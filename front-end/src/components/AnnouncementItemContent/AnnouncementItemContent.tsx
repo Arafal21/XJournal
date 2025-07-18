@@ -6,11 +6,11 @@ import { AnnouncementModal } from '../AnnouncementModal/AnnouncementModal';
 import { EditButton } from '../../ui/buttons/EditButton/EditButton';
 import { DeleteButton } from '../../ui/buttons/DeleteButton/DeleteButton';
 import { ExpandButton } from '../../ui/buttons/ExpandButton/ExpandButton';
-import { formatDateWithToday } from '../../utils/formatDateWithToday';
 import { AnnouncementItemContentProps } from '../../types/announcementProps';
 import { useResponsive } from '../../hooks/useResponsive';
 import { UserBadge } from '../UserBadge/UserBadge';
 import { useModeratingRole } from '../../contexts/ModeratingRolesContext';
+import { formatUTCToLongDate } from '../../utils/formatUTCToLongDate';
 
 export function AnnouncementItemContent({
 	announcement,
@@ -44,7 +44,7 @@ export function AnnouncementItemContent({
 
 				<div className={styles.actions}>
 					<time dateTime={announcement.createdAt} className={styles.postedAt}>
-						{formatDateWithToday(announcement.createdAt)}
+						{formatUTCToLongDate(announcement.createdAt)}
 					</time>
 
 					{moderatingRole && (

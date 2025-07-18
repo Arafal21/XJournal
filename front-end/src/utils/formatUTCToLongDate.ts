@@ -1,4 +1,4 @@
-export function formatDateUTC(isoString?: string): string | undefined {
+export function formatUTCToLongDate(isoString?: string): string | undefined {
 	if (!isoString) return;
 
 	const date = new Date(isoString);
@@ -14,3 +14,6 @@ export function formatDateUTC(isoString?: string): string | undefined {
 
 	return date.toLocaleDateString('en-US', options);
 }
+// returns:
+// from: 2025-07-16T11:24:18.955
+// to: Wednesday, 07/16/2025
