@@ -123,11 +123,11 @@ We use a special .srOnly class (“screen-reader only”) to keep the element in
     -   [x] Allow principals and teachers to create, edit, and delete announcements.
     -   [x] Modal dialog for roles authorized to manage announcements.
     -   [x] Display author and timestamp.
-    -   [x] Display all dates in US format (MM/DD/YYYY) via `formatUTCToLongDate`
+    -   [x] Display all dates in US format (MM/DD/YYYY) via `formatDateWithToday`
 
 <hr/>
 
-<!-- TODO: GIF -->
+![calendar-gif](https://github.com/user-attachments/assets/e247b757-d9fa-41de-b8d0-b27fa39fa784)
 
 -   [x] **Calendar Page** - Manage quizzes and tests, ensuring everyone stays informed and prepared.
     -   [x] Display all dates in US format (MM/DD/YYYY), and 24-hour time format.
@@ -186,7 +186,8 @@ We use a special .srOnly class (“screen-reader only”) to keep the element in
 
 <hr/>
 
-<!-- TODO: GIF -->
+![grades-gif](https://github.com/user-attachments/assets/3861bc91-fd24-4a08-9e64-53db8c0c6553)
+
 
 -   [x] **Grades Page** - Keep track of student performance.
     -   [x] European grading system (1-6).
@@ -370,11 +371,13 @@ Environment variables in .env.local
 
 ## 🔥 6. Planned features:
 
-1. Presence Page - in progress
-2. Switch to European 1-6/US A-F grades system (now only european)
-3. Last login in Admin Panel - in progress
-4. Real time chat with socket.io or/and video chat.
-5. AI feature.
+1. In some places in app where ModalActionButton is used - useFormStatus is not yet supported.
+2. Accessibility Improvements
+3. Presence Page.
+4. Switch to European 1-6/US A-F grades system (now only european)
+5. Last login feature in Admin Panel.
+6. Real time chat with socket.io or/and video chat.
+7. AI feature.
 
 ## Contributing
 
@@ -389,3 +392,8 @@ Thank you for your support!
 3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
+
+## Contact
+
+[Rafal Andrzejkiewicz - linkedin](https://www.linkedin.com/in/rafaland) - linkedin.com/in/rafaland <br>
+[Rafal Andrzejkiewicz - e-mail](rafaland21@protonmail.com) - rafaland21@protonmail.com <br>
