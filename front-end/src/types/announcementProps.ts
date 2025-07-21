@@ -48,17 +48,6 @@ export interface AnnouncementProps {
 	createdAt: string;
 }
 
-export interface AnnouncementItemContentProps {
-	announcement: Announcement;
-	isWrapped: boolean;
-	toggleWrapped: () => void;
-	isModalVisible: boolean;
-	closeModal: () => void;
-	currentAnnouncement: Announcement | null;
-	onEdit: (announcement: Announcement) => void;
-	onDelete: (id: string) => Promise<void>;
-}
-
 export interface Announcement {
 	_id: string;
 	description: string;

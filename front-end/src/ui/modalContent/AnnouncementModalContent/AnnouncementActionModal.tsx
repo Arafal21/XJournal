@@ -9,12 +9,13 @@ import { ExtendableModalHeader } from '../../modalHeader/ExtendableModalHeader/E
 import { BackButtonMobile } from '../../buttons/BackButtonMobile/BackButtonMobile';
 import { deleteAnnouncement, postNewAnnouncement, updateAnnouncement } from '../../../api/announcementsApi';
 import { DeleteButton } from '../../buttons/DeleteButton/DeleteButton';
-import { formatDateWithToday } from '../../../utils/formatDateWithToday';
+
 import { AnnouncementActionModalProps, AnnouncementsFormState } from '../../../types/announcementProps';
 
 import { UserBadge } from '../../../components/UserBadge/UserBadge';
 import { useLoggedUser } from '../../../contexts/LoggedUserContext';
 import { ModalActionButton } from '../../buttons/ModalActionButton/ModalActionButton';
+import { formatUTCToLongDate } from '../../../utils/formatUTCToLongDate';
 
 export function AnnouncementActionModal({
 	closeModal,
@@ -108,7 +109,7 @@ export function AnnouncementActionModal({
 					/>
 
 					<p className={styles.date}>
-						{currentAnnouncement ? formatDateWithToday(currentAnnouncement.createdAt) : 'Today'}
+						{currentAnnouncement ? formatUTCToLongDate(currentAnnouncement.createdAt) : 'Today'}
 					</p>
 				</div>
 

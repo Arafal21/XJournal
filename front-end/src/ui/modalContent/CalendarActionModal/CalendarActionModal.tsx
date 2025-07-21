@@ -14,7 +14,7 @@ import { SelectedClassContext } from '../../../contexts/SelectedClassContext';
 import { SelectedSubjectContext } from '../../../contexts/SelectedSubjectContext';
 import { convertValue } from '../../../utils/convertValue';
 import { availableSubjects, subjectKeysForBackend } from '../../../constants/subjects';
-import { formatDateUTC } from '../../../utils/formatDateUTC';
+import { formatUTCToLongDate } from '../../../utils/formatUTCToLongDate';
 import { SelectedExam } from '../../../types/calendarProps';
 import { formatDateAndTimeToUTC } from '../../../utils/formatDateAndTimeToUTC';
 
@@ -100,7 +100,9 @@ export function CalendarActionModal({ closeActionModal, selectedExam }: Calendar
 			</FullModalHeader>
 
 			<div className={styles.modalContent}>
-				<p className={styles.selectedDay}>{formatDateUTC(selectedExam.startDate) ?? 'No date selected'}</p>
+				<p className={styles.selectedDay}>
+					{formatUTCToLongDate(selectedExam.startDate) ?? 'No date selected'}
+				</p>
 
 				<div className={styles.subjectContainer}>
 					<ResponsiveSubjectSelector />

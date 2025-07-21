@@ -6,11 +6,22 @@ import { AnnouncementModal } from '../AnnouncementModal/AnnouncementModal';
 import { EditButton } from '../../ui/buttons/EditButton/EditButton';
 import { DeleteButton } from '../../ui/buttons/DeleteButton/DeleteButton';
 import { ExpandButton } from '../../ui/buttons/ExpandButton/ExpandButton';
-import { AnnouncementItemContentProps } from '../../types/announcementProps';
 import { useResponsive } from '../../hooks/useResponsive';
 import { UserBadge } from '../UserBadge/UserBadge';
 import { useModeratingRole } from '../../contexts/ModeratingRolesContext';
 import { formatUTCToLongDate } from '../../utils/formatUTCToLongDate';
+import { Announcement } from '../../types/announcementProps';
+
+interface AnnouncementItemContentProps {
+	announcement: Announcement;
+	isWrapped: boolean;
+	toggleWrapped: () => void;
+	isModalVisible: boolean;
+	closeModal: () => void;
+	currentAnnouncement: Announcement | null;
+	onEdit: (announcement: Announcement) => void;
+	onDelete: (id: string) => Promise<void>;
+}
 
 export function AnnouncementItemContent({
 	announcement,
