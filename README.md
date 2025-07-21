@@ -26,18 +26,13 @@
 1st Class:
 Student Ethan Miller - email: ethanmiller@xjournal.com / password: 123ethan456
 Parent Michael Miller - email: michaelmiller@xjournal.com / password: 234michael567
-
-
-# You can log in using a parent or student account.
-# For security reasons, teacher and principal credentials aren’t publicly shared in this demo.
-# If you’re a recruiter and would like to explore these roles, please get in touch —
-# I’ll reply promptly and provide all necessary passwords. Contact: rafaland21@protonmail.com
+...
 
 ## principal (1 account)
-Principal Jason Carter: e-mail: jasoncarter@xjournal.com / password: BLANK
+Principal Jason Carter: e-mail: jasoncarter@xjournal.com / password: 753jasoncarter885
 
 ## teacher (8 accounts)
-OOP John Smith: e-mail: johnsmith@xjournal.com / password: BLANK
+OOP John Smith: e-mail: johnsmith@xjournal.com / password: 11john78
 ...
 
 
@@ -51,13 +46,9 @@ For all user data, please open the allLoginData.txt file or click: https://githu
 <br/>
 
 ## 🔥 2. Application running locally (no available yet)
-1. Backend docs - <a href="https://www.google.com">Unavailable yet</a>
+1. Backend docs - <a href="https://www.xjournal.site">Unavailable yet</a>
 
-2. Please fill for your own: `/front-end/.env.local` and `/back-end/.env`
-
-3. Copy the database schema to your mongodb compass (placed in the /databases folder)
-4. Use a postman to create a user with role principal
-5. Fill in constants/classes.ts with your class IDs. (This will be automated later.)
+2. `/front-end/.env.local` is filled for your own. Make sure that provided data is valid.
 
 <br/>
 <br/>

@@ -1,11 +1,7 @@
-You may log in using any parent or student account. For security reasons, I don’t provide access to teacher or principal accounts, as that might result in inappropriate content being posted since the app is publicly accessible. If you’re a recruiter and want to take a closer look at the project, please get in touch—I have my email on my phone and will reply quickly (usually within 5 minutes). I’ll also provide a full set of passwords.
-Contact me: BLANK@protonmail.com
-
-
 🟠 Principal:
 
 Jason Carter
-email: jasoncarter@xjournal.com / password: BLANK
+email: jasoncarter@xjournal.com / password: 753jasoncarter885
 
 
 
@@ -13,28 +9,28 @@ email: jasoncarter@xjournal.com / password: BLANK
 🟡 Teachers:
 
 1.OOP - John Smith:
-email: johnsmith@xjournal.com / password: BLANK
+email: johnsmith@xjournal.com / password: 11john78
 
 2.Mathematics - Michael Johnson:
-email: michaeljohnson@xjournal.com / password: BLANK
+email: michaeljohnson@xjournal.com / password: 47michael49
 
 3.Javascript - Emily Davis:
-email: emilydavis@xjournal.com / password: BLANK
+email: emilydavis@xjournal.com / password: 01emily48
 
 4.Data Structures - Sarah Williams:
-email: sarahwilliams@xjournal.com / password: BLANK
+email: sarahwilliams@xjournal.com / password: 29sarah11
 
 5.System Design - David Brown:
-email: davidbrown@xjournal.com / password: BLANK
+email: davidbrown@xjournal.com / password: 73david78
 
 6.Databases - Ashley Miller:
-email: ashleymiller@xjournal.com / password: BLANK
+email: ashleymiller@xjournal.com / password: 27ashley56
 
 7.English - Christopher Jones:
-email: christopherjones@xjournal.com / password: BLANK
+email: christopherjones@xjournal.com / password: 18christopher68
 
 8.PE - Jennifer Garcia:
-email: jennifergarcia@xjournal.com / password: BLANK
+email: jennifergarcia@xjournal.com / password: 83jennifer04
 
 
 
