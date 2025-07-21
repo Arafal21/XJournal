@@ -1,0 +1,13 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins' as *;
+@use '../../styles/z-indexes.scss' as *;
+
+.info {
+    @include header-3-600;
+    text-align: center;
+    margin: $spacing-2xl;
+    color: #fff;
+    background-color: $green-800;
+
+    padding: $spacing-lg;
+}

@@ -1,4 +1,3 @@
-import { Footer } from '../../components/Footer/Footer';
 import { LoginPage } from '../_views/LoginPage/LoginPage';
 
 export const metadata = {
@@ -10,7 +9,6 @@ export default function LoginPageRoute() {
 	return (
 		<>
 			<LoginPage />
-			<Footer />
 		</>
 	);
 }

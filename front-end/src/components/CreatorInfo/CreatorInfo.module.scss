@@ -1,0 +1,18 @@
+@use '../../styles/variables.scss' as *;
+@use '../../styles/mixins' as *;
+@use '../../styles/z-indexes.scss' as *;
+
+.text {
+	font-size: $font-size-xs;
+	text-align: center;
+	transition: 0.3s color;
+
+	.link {
+		font-weight: $font-weight-bold;
+		color: $green-500;
+
+		&:hover {
+			color: $green-300;
+		}
+	}
+}

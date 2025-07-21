@@ -26,6 +26,8 @@ import { EmailInput } from '../../ui/input/EmailInput/EmailInput';
 import { LoginFormState } from '../../types/loginProps';
 import { SecondaryLoginButton } from '../../ui/buttons/SecondaryLoginButton/SecondaryLoginButton';
 import { BASE_ROUTE } from '../../constants/routing';
+import { DevModeInfo } from '../DevModeInfo/DevModeInfo';
+import { CreatorInfo } from '../CreatorInfo/CreatorInfo';
 
 export function LoginForm({ children }: { children: React.ReactNode }) {
 	const [state, formAction] = useActionState(handleSubmit, { email: '', password: '' });
@@ -114,6 +116,9 @@ export function LoginForm({ children }: { children: React.ReactNode }) {
 				</h3>
 
 				<h2 className={`${styles.headingMobile} hiddenOnDesktop`}>Your Gateway to Smarter Education Management</h2>
+
+				<CreatorInfo/>
+				<DevModeInfo />
 
 				{state.formError && <p className={styles.error}>Please provide valid form data.</p>}
 				<div className={styles.required}>

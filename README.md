@@ -39,7 +39,7 @@ OOP John Smith: e-mail: johnsmith@xjournal.com / password: 11john78
 
 ```
 
-## Applied devmode:
+## Applied **Devmode**:
 
 Whether you run this project locally or access it through the web, you’ll be hooked up to my API. **Important:** All changes occur in “developer mode,” so any edits—announcements, data tweaks, etc.—will automatically reset to the original state after 5 minutes.
 
@@ -399,5 +399,5 @@ Thank you for your support!
 
 ## Contact
 
-[Rafal Andrzejkiewicz - linkedin](https://www.linkedin.com/in/rafaland) - linkedin.com/in/rafaland <br>
+[Rafal Andrzejkiewicz - linkedin](https://www.linkedin.com/in/rafaland) - https://www.linkedin.com/in/rafaland <br>
 [Rafal Andrzejkiewicz - e-mail](rafaland21@protonmail.com) - rafaland21@protonmail.com <br>
