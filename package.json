@@ -12,7 +12,7 @@
 	},
 	"scripts": {
 		"front-end": "npm run dev --workspace=front-end",
-		"dev": "npm-run-all front-end"
+		"dev": "npm-run-all --parallel front-end"
 	},
 	"devDependencies": {
 		"dotenv": "^17.0.1"
