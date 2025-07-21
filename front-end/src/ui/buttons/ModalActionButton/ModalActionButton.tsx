@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import styles from './ModalActionButton.module.scss';
 
@@ -13,5 +13,14 @@ interface ModalActionButtonProps {
 export function ModalActionButton({ isFormValid, children, onClick }: ModalActionButtonProps) {
 	const { pending } = useFormStatus();
 
-	return <button className={isFormValid ? styles.buttonReady : styles.buttonNoReady} onClick={onClick}>{pending ? 'saving...' : children}</button>;
+	return (
+		<button
+			className={`${isFormValid ? styles.buttonReady : styles.buttonNoReady} ${
+				pending ? styles.buttonNoReady : null
+			}`}
+			onClick={onClick}
+			disabled={pending}>
+			{pending ? 'saving...' : children}
+		</button>
+	);
 }

@@ -16,7 +16,7 @@ const openSans = Open_Sans({
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
 	return (
-		<html lang='en'>
+		<html lang='en-US'>
 			<body className={openSans.className}>
 				<Layout>{children}</Layout>
 			</body>
