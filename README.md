@@ -19,6 +19,8 @@
 
 ### Figma project: [Figma project](https://www.figma.com/design/ixSiVXF9JTwrgxHL12Gz8S/School-Journal---High-Fidelity-Desktop-Mobile?node-id=50-41&t=nMUCEdUptHBTtIp2-1)
 
+
+
 ### Login:
 
 ```bash
@@ -35,8 +37,12 @@ Principal Jason Carter: e-mail: jasoncarter@xjournal.com / password: 753jasoncar
 OOP John Smith: e-mail: johnsmith@xjournal.com / password: 11john78
 ...
 
-
 ```
+
+## Applied devmode:
+
+Whether you run this project locally or access it through the web, you’ll be hooked up to my API. **Important:** All changes occur in “developer mode,” so any edits—announcements, data tweaks, etc.—will automatically reset to the original state after 5 minutes.
+
 
 For all user data, please open the allLoginData.txt file or click: https://github.com/Arafal21/XJournal/blob/main/allLoginData.txt
 
@@ -45,10 +51,14 @@ For all user data, please open the allLoginData.txt file or click: https://githu
 <br/>
 <br/>
 
-## 🔥 2. Application running locally (no available yet)
-1. Backend docs - <a href="https://www.xjournal.site">Unavailable yet</a>
+## 🔥 2. Application running locally
+1. Clone a repo
+2. Make sure that provided data is correct for your own - `/front-end/.env.local`.
 
-2. `/front-end/.env.local` is filled for your own. Make sure that provided data is valid.
+Backend docs - <a href="https://www.xjournal.site">Unavailable yet</a>
+
+
+
 
 <br/>
 <br/>
@@ -58,6 +68,7 @@ For all user data, please open the allLoginData.txt file or click: https://githu
 ## 🔥 3. Application features & approache:
 
 ### ✅ Application Description:
+
 
 A School Electronic Journal application streamlines communication and organization in schools by providing a centralized platform for managing announcements, student records (including grades, attendance, schedule, and exam calendar), and secure login access. Only the principal has the ability to add new members to the school community, while all users can access their account information via the profiles tab. The application enables teachers to manage students' progress in real-time, keeping both students and parents well-informed about their performance.
 
@@ -362,13 +373,15 @@ Environment variables in .env.local
 
 ## 🔥 6. Planned features:
 
-1. In some places in app where ModalActionButton is used - useFormStatus is not yet supported.
-2. Accessibility Improvements
-3. Presence Page.
-4. Switch to European 1-6/US A-F grades system (now only european)
-5. Last login feature in Admin Panel.
-6. Real time chat with socket.io or/and video chat.
-7. AI feature.
+1. Tests
+2. Cleaning inputs in calendar modals after actions
+3. In some places in app where ModalActionButton is used - useFormStatus is not yet supported.
+4. Accessibility Improvements
+5. Presence Page.
+6. Switch to European 1-6/US A-F grades system (now only european)
+7. Last login feature in Admin Panel.
+8. Real time chat with socket.io or/and video chat.
+9. AI feature.
 
 ## Contributing
 
