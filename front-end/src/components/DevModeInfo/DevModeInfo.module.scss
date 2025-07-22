@@ -3,7 +3,7 @@
 @use '../../styles/z-indexes.scss' as *;
 
 .info {
-    @include header-3-600;
+    @include body-2-400;
     text-align: center;
     margin: $spacing-2xl;
     color: #fff;
