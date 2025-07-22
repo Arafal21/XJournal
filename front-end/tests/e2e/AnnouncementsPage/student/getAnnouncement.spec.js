@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
-const studentEmail = process.env.TESTS_STUDENT_EMAIL;
-const studentPassword = process.env.TESTS_STUDENT_PASSWORD;
+const studentEmail = process.env.NEXT_PUBLIC_TESTS_STUDENT_EMAILL;
+const studentPassword = process.env.NEXT_PUBLIC_TESTS_STUDENT_PASSWORD;
 
 test('should display specific announcements', async ({ page }) => {
 	await page.goto('http://localhost:5173/login');

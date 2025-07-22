@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
-const parentEmail = process.env.TESTS_PARENT_EMAIL;
-const parentPassword = process.env.TESTS_PARENT_PASSWORD;
+const parentEmail = process.env.NEXT_PUBLIC_TESTS_PARENT_EMAIL;
+const parentPassword = process.env.NEXT_PUBLIC_TESTS_PARENT_PASSWORD;
 
 test('should display specific announcements', async ({ page }) => {
 	await page.goto('http://localhost:5173/login');
