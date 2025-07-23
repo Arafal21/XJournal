@@ -1,6 +1,7 @@
-import { fetchAuthUser } from '@/api/middleware_helpers/fetchAuthUser';
-import { BASE_ROUTE } from '@/constants/routing';
+
 import { NextRequest, NextResponse } from 'next/server';
+import { BASE_ROUTE } from './constants/routing';
+import { fetchAuthUser } from './api/middleware_helpers/fetchAuthUser';
 
 export const config = {
 	matcher: ['/login', `/${BASE_ROUTE}/:path*`],
