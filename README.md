@@ -383,7 +383,7 @@ Environment variables in .env.local
 
 ## 🔥 6. Planned features/improvements:
 
-1. Tests - currently in progress
+1. Tests - currently in progress (testing context, playwright, jest, react testing library)
 2. Cleaning inputs in calendar modals after actions
 3. In some places in app where ModalActionButton is used - useFormStatus is not yet supported.
 4. Accessibility Improvements

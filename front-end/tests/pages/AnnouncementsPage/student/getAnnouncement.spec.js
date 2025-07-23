@@ -1,6 +1,6 @@
 // import { test, expect } from '@playwright/test';
 
-// const studentEmail = process.env.NEXT_PUBLIC_TESTS_STUDENT_EMAILL;
+// const studentEmail = process.env.NEXT_PUBLIC_TESTS_STUDENT_EMAIL;
 // const studentPassword = process.env.NEXT_PUBLIC_TESTS_STUDENT_PASSWORD;
 
 // test('should display specific announcements', async ({ page }) => {
