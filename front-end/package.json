@@ -1,32 +1,36 @@
 {
-  "name": "front-end",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev -p 5173",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "test": "NODE_OPTIONS='--experimental-vm-modules' jest"
-  },
-  "type": "module",
-  "dependencies": {
-    "@types/react-dom": "19.0.2",
-    "babel-plugin-react-compiler": "^19.0.0-beta-201e55d-20241215",
-    "dotenv": "^17.2.0",
-    "eslint": "8.48.0",
-    "eslint-config-next": "^15.1.2",
-    "i18next": "^24.2.2",
-    "motion": "^12.23.6",
-    "next": "^15.1.2",
-    "react": "^19.0.0-rc.1",
-    "react-dom": "^19.0.0-rc.1"
-  },
-  "devDependencies": {
-    "@playwright/test": "^1.51.1",
-    "@types/jest": "^30.0.0",
-    "@types/node": "22.10.2",
-    "@types/react": "19.0.2",
-    "sass": "^1.83.0"
-  }
+	"name": "front-end",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev -p 5173",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint",
+		"test": "npm run test:unit && npm run test:e2e",
+		"test:unit": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --testMatch \"**/tests/unit/**/*.[jt]s?(x)\"",
+		"test:e2e": "npx playwright test tests/e2e"
+	},
+	"type": "module",
+	"dependencies": {
+		"@types/react-dom": "19.0.2",
+		"babel-plugin-react-compiler": "^19.0.0-beta-201e55d-20241215",
+		"dotenv": "^17.2.0",
+		"eslint": "8.48.0",
+		"eslint-config-next": "^15.1.2",
+		"i18next": "^24.2.2",
+		"motion": "^12.23.6",
+		"next": "^15.1.2",
+		"react": "^19.0.0-rc.1",
+		"react-dom": "^19.0.0-rc.1"
+	},
+	"devDependencies": {
+		"@playwright/test": "^1.51.1",
+		"@types/jest": "^30.0.0",
+		"@types/node": "22.10.2",
+		"@types/react": "19.0.2",
+		"cross-env": "^7.0.3",
+		"jest-environment-jsdom": "^30.0.5",
+		"sass": "^1.83.0"
+	}
 }

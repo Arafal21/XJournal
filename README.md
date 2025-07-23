@@ -275,9 +275,16 @@ Thanks for your cooperation:
 
 /front-end/tests
 
-1. Open npm run dev in first terminal
-2. in second terminal: cd front-end
-3. `npx playwright test --ui` or `npx playwright test`
+
+- IMPORTANT: Open npm run dev in additional terminal (for playwright)
+
+- All commands type in in XJournal/front-end directory
+
+- Test recording in playwright `npx playwright codegen localhost:5173` (Sometimes you have to start them one more time, probably via the API.)
+
+- Run all e2e playwright tests - ui: `npx playwright test --ui`, and then f5 shortcut
+- Run all unit tests - headless: `npm run test:unit`
+- Run all e2e tests - headless: `npm run test:e2e` It doesn't work yet, probably due to API limitations.
 
 
 Test configuration:

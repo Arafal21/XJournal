@@ -1,45 +1,41 @@
 import { defineConfig, devices } from '@playwright/test';
 import dotenv from 'dotenv';
 import path from 'path';
-import { fileURLToPath } from 'url'
+import { fileURLToPath } from 'url';
 
-
-const getDirName = () => path.dirname(fileURLToPath(import.meta.url))
+const getDirName = () => path.dirname(fileURLToPath(import.meta.url));
 
 dotenv.config({
-  path: path.join(getDirName(), '.env.local'),
+	path: path.join(getDirName(), '.env.local'),
 });
 
-
 export default defineConfig({
-  testDir: './tests',
+	testDir: './tests',
 
-  fullyParallel: true,
-  forbidOnly: !!process.env.CI,
-  retries: process.env.CI ? 2 : 0,
-  workers: process.env.CI ? 1 : undefined,
-  reporter: 'html',
+	fullyParallel: true,
+	forbidOnly: !!process.env.CI,
+	retries: process.env.CI ? 2 : 0,
+	workers: process.env.CI ? 1 : undefined,
+	reporter: 'html',
 
-  use: {
-    trace: 'on-first-retry',
-  },
+	use: {
+		trace: 'on-first-retry',
+	},
 
-  projects: [
-    {
-      name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
-    },
+	projects: [
+		{
+			name: 'chromium',
+			use: { ...devices['Desktop Chrome'] },
+		},
 
-    {
-      name: 'firefox',
-      use: { ...devices['Desktop Firefox'] },
-    },
+		{
+			name: 'firefox',
+			use: { ...devices['Desktop Firefox'] },
+		},
 
-    {
-      name: 'webkit',
-      use: { ...devices['Desktop Safari'] },
-    },
-
-  ],
-
+		{
+			name: 'webkit',
+			use: { ...devices['Desktop Safari'] },
+		},
+	],
 });
