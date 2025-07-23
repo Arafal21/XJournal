@@ -271,11 +271,14 @@ Thanks for your cooperation:
 <br/>
 <br/>
 
-## 🔥 5. Tests
+## 🔥 5. Tests - in progress
 
 /front-end/tests
 
-All tests running: `npx playwright test --ui`
+1. Open npm run dev in first terminal
+2. in second terminal: cd front-end
+3. `npx playwright test --ui` or `npx playwright test`
+
 
 Test configuration:
 Some scenarios (e.g. posting or editing announcements) require a valid user session. Provide your credentials via:
@@ -371,9 +374,9 @@ Environment variables in .env.local
 <br/>
 <br/>
 
-## 🔥 6. Planned features:
+## 🔥 6. Planned features/improvements:
 
-1. Tests
+1. Tests - currently in progress
 2. Cleaning inputs in calendar modals after actions
 3. In some places in app where ModalActionButton is used - useFormStatus is not yet supported.
 4. Accessibility Improvements

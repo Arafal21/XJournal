@@ -1,0 +1,40 @@
+// import { test, expect } from '@playwright/test';
+
+// const principalEmail = process.env.NEXT_PUBLIC_TESTS_PRINCIPAL_EMAIL;
+// const principalPassword = process.env.NEXT_PUBLIC_TESTS_PRINCIPAL_PASSWORD;
+
+// test('should create, post, delete a teacher', async ({ page }) => {
+// 	await page.goto('http://localhost:5173/login');
+// 	await page.getByRole('textbox', { name: 'ethanmiller@xjournal.com' }).click();
+// 	await page.getByRole('textbox', { name: 'ethanmiller@xjournal.com' }).fill(principalEmail);
+// 	await page.getByRole('textbox', { name: '123ethan456' }).click();
+// 	await page.getByRole('textbox', { name: '123ethan456' }).fill(principalPassword);
+// 	await page.getByRole('button', { name: 'Log in' }).click();
+// 	await page.getByRole('link', { name: 'Admin' }).first().click();
+// 	await page.getByRole('button', { name: 'add new user plus icon' }).click();
+// 	await page.getByRole('textbox', { name: 'Name', exact: true }).click();
+// 	await page.getByRole('textbox', { name: 'Name', exact: true }).fill('teachertest@xjournal.com');
+// 	await page.getByRole('textbox', { name: 'LastName', exact: true }).click();
+// 	await page.getByRole('textbox', { name: 'Name', exact: true }).dblclick();
+// 	await page.getByRole('textbox', { name: 'Name', exact: true }).click();
+// 	await page.getByRole('textbox', { name: 'Name', exact: true }).fill('teachername');
+// 	await page.getByRole('textbox', { name: 'LastName', exact: true }).click();
+// 	await page.getByRole('textbox', { name: 'LastName', exact: true }).fill('teacherlastname');
+// 	await page.getByRole('textbox', { name: 'E-mail', exact: true }).click();
+// 	await page.getByRole('textbox', { name: 'E-mail', exact: true }).fill('teacheremail@xjournal.com');
+// 	await page.getByRole('textbox', { name: 'Phone number' }).click();
+// 	await page.getByRole('textbox', { name: 'Phone number' }).fill('+1887665543');
+// 	await page.getByRole('textbox', { name: 'Password' }).click();
+// 	await page.getByRole('textbox', { name: 'Password' }).fill('testpassword123534');
+// 	await page.getByRole('button', { name: 'POST' }).click();
+// 	await expect(page.getByText('teachername teacherlastnameteacheremail@xjournal.comTeacher+')).toBeVisible();
+// 	await page.getByText('teachername teacherlastname').click();
+// 	await page.getByRole('textbox', { name: 'Name', exact: true }).click();
+// 	await page.getByRole('textbox', { name: 'Name', exact: true }).fill('edited');
+// 	await page.getByRole('textbox', { name: 'Password' }).click();
+// 	await page.getByRole('textbox', { name: 'Password' }).fill('testpassword11223344');
+// 	await page.getByRole('button', { name: 'SAVE' }).click();
+// 	await expect(page.getByText('edited teacherlastname')).toBeVisible();
+// 	await page.getByText('edited teacherlastnameteacheremail@xjournal.comTeacher+').click();
+// 	await page.getByRole('button', { name: 'Delete button' }).click();
+// });

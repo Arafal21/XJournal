@@ -6,7 +6,8 @@
     "dev": "next dev -p 5173",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "NODE_OPTIONS='--experimental-vm-modules' jest"
   },
   "type": "module",
   "dependencies": {
@@ -23,6 +24,7 @@
   },
   "devDependencies": {
     "@playwright/test": "^1.51.1",
+    "@types/jest": "^30.0.0",
     "@types/node": "22.10.2",
     "@types/react": "19.0.2",
     "sass": "^1.83.0"

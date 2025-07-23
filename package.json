@@ -12,9 +12,13 @@
 	},
 	"scripts": {
 		"front-end": "npm run dev --workspace=front-end",
-		"dev": "npm-run-all --parallel front-end"
+		"dev": "npm-run-all --parallel front-end",
+		"test": "NODE_OPTIONS='--experimental-vm-modules' jest"
 	},
 	"devDependencies": {
-		"dotenv": "^17.0.1"
+		"@types/jest": "^30.0.0",
+		"cross-env": "^7.0.3",
+		"dotenv": "^17.0.1",
+		"jest": "^30.0.5"
 	}
 }
