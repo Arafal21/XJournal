@@ -41,7 +41,7 @@ OOP John Smith: e-mail: johnsmith@xjournal.com / password: 11john78
 
 ## Applied **Devmode**:
 
-Whether you run this project locally or access it through the web, you’ll be hooked up to my API. **Important:** All changes occur in “developer mode,” so any edits—announcements, data tweaks, etc.—will automatically reset to the original state after 5 minutes.
+Whether you run this project locally or access it through the web, you’ll be hooked up to my API. **Important:** All changes occur in “developer mode,” so any edits—announcements, data tweaks, etc.—will automatically reset to the original state after 20 minutes.
 
 
 For all user data, please open the allLoginData.txt file or click: https://github.com/Arafal21/XJournal/blob/main/allLoginData.txt
@@ -386,12 +386,13 @@ Environment variables in .env.local
 1. Tests - currently in progress (testing context, playwright, jest, react testing library)
 2. Cleaning inputs in calendar modals after actions
 3. In some places in app where ModalActionButton is used - useFormStatus is not yet supported.
-4. Accessibility Improvements
-5. Presence Page.
-6. Switch to European 1-6/US A-F grades system (now only european)
-7. Last login feature in Admin Panel.
-8. Real time chat with socket.io or/and video chat.
-9. AI feature.
+4. Accessibility Improvements 
+5. Fix bouncing radio input in admin panel
+6. Presence Page.
+7. Switch to European 1-6/US A-F grades system (now only european)
+8. Last login feature in Admin Panel.
+9. Real time chat with socket.io or/and video chat.
+10. AI feature.
 
 ## Contributing
 
