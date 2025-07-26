@@ -77,6 +77,14 @@ MVP - errors messages in some places are limited to alert(), but where there wer
 
 The application has been aligned with the principles of accesibility.
 
+Middleware Behavior (middleware.ts):
+- Role‑based access
+    - After logging in, users whose role is not Principal are denied entry to /principal-panel.
+- Unauthenticated users
+    - Cannot access any routes under /logged (e.g. /logged/announcements).
+- Authenticated users
+    - Are prevented from navigating back to the login screen once signed in.
+
 During the development of XJournal, an online gradebook system, I concentrated on delivering a minimum viable product by including only the essential features, which allowed us to efficiently work within the limited time available as our designer and backend developer balanced their primary work commitments. I collaborated closely with a skilled designer and backend developer to deliver a robust and scalable product, and I am excited about the prospect of further expanding its capabilities in future iterations.
 
 experimental approach - sharedClasses.scss - contains 'hiddenOnDesktop', 'hiddenOnMobile' - there is no duplication in the code - in some parts of the application you do not need to specifically create a scss file - the DRY principle is preserved. Common sense has been maintained, and it is not used to every extreme.
