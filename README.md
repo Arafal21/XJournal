@@ -77,6 +77,8 @@ MVP - errors messages in some places are limited to alert(), but where there wer
 
 The application has been aligned with the principles of accesibility.
 
+Applied React compiler.
+
 Middleware Behavior (middleware.ts):
 - Role‑based access
     - After logging in, users whose role is not Principal are denied entry to /principal-panel.
