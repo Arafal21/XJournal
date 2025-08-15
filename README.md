@@ -52,7 +52,7 @@ For all user data, please open the allLoginData.txt file or click: https://githu
 <br/>
 
 ## 🔥 2. Application running locally
-1. Clone a repo
+1. Clone a repo: `git clone https://github.com/Arafal21/XJournal.git .`
 2. Make sure that provided data is correct for your own - `/front-end/.env.local`.
 
 Backend docs - <a href="https://www.xjournal.site">Unavailable yet</a>
