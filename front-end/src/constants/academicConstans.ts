@@ -11,7 +11,7 @@ export const schoolDays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday
 
 export const initialSchoolDay = schoolDays[0]; // Monday
 
-export const lessomTimeStamps = [
+export const lessonTimeStamps = [
 	'08:00 - 09:00',
 	'09:00 - 10:00',
 	'10:00 - 11:00',

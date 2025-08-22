@@ -1,9 +1,9 @@
 import styles from './LessonTimeStamps.module.scss';
 
-import { lessomTimeStamps } from '../../constants/academicConstans';
+import { lessonTimeStamps } from '../../constants/academicConstans';
 import { SelectableButton } from '../../ui/buttons/SelectableButton/SelectableButton';
 
-type TimeSlot = (typeof lessomTimeStamps)[number];
+type TimeSlot = (typeof lessonTimeStamps)[number];
 
 interface LessonTimeStampsProps {
 	selected: TimeSlot;
@@ -13,7 +13,7 @@ interface LessonTimeStampsProps {
 export function LessonTimeStamps({ selected, onSelect }: LessonTimeStampsProps) {
 	return (
 		<div className={styles.subjectContainer}>
-			<SelectableButton data={lessomTimeStamps} selected={selected} onSelect={onSelect} />
+			<SelectableButton data={lessonTimeStamps} selected={selected} onSelect={onSelect} />
 		</div>
 	);
 }
