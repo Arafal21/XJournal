@@ -10,6 +10,7 @@ import { SelectedClassContextProvider } from '../../../contexts/SelectedClassCon
 import { SelectedSubjectContextProvider } from '../../../contexts/SelectedSubjectContext';
 import { SelectedSemesterContextProvider } from '../../../contexts/SelectedSemesterContext';
 import { moderatingRoles } from '../../../constants/permissions';
+import { AComponentForCopy } from '../../../components/AComponentForCopy/AComponentForCopy';
 
 interface GradesPageProps {
 	selectedClass: string;
@@ -34,6 +35,7 @@ export async function GradesPage({ selectedClass, initialSemester, initialSubjec
 							<BackgroundMainContentDesktop padding={true}>
 								<main>
 
+									<AComponentForCopy />
 									<GradesPanel
 										isTeacherOrPrincipal={isTeacherOrPrincipal}
 										gradesData={gradesData}

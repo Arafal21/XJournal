@@ -52,8 +52,6 @@ export function GradesStudentRow({ studentsInSelectedClass, studentsGrades }: Gr
 		resetSelectedGrade();
 	};
 
-	console.log(studentsInSelectedClass);
-
 	return (
 		<>
 			{studentsInSelectedClass.map((student) => {

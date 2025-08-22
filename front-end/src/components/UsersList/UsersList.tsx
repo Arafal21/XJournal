@@ -18,11 +18,5 @@ export function UsersList({ users }: UsersListProps) {
 				);
 		  });
 
-	return (
-		<>
-			{filteredUsers.map((user) => (
-				<UserInstance key={user._id} user={user} />
-			))}
-		</>
-	);
+	return filteredUsers.map((user) => <UserInstance key={user._id} user={user} />);
 }

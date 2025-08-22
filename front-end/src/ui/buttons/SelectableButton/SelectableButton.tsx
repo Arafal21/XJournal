@@ -12,16 +12,12 @@ interface SelectableButtonProps {
 }
 
 export function SelectableButton({ data, selected, onSelect }: SelectableButtonProps) {
-	return (
-		<>
-			{data.map((item) => (
-				<button
-					key={item}
-					className={`${styles.selectableButton} ${selected === item ? styles.active : null}`}
-					onClick={() => onSelect(item)}>
-					{convertValue(subjectKeysForBackend, availableSubjects, item)}
-				</button>
-			))}
-		</>
-	);
+	return data.map((item) => (
+		<button
+			key={item}
+			className={`${styles.selectableButton} ${selected === item ? styles.active : null}`}
+			onClick={() => onSelect(item)}>
+			{convertValue(subjectKeysForBackend, availableSubjects, item)}
+		</button>
+	));
 }
