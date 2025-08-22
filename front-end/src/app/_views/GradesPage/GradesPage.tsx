@@ -35,7 +35,6 @@ export async function GradesPage({ selectedClass, initialSemester, initialSubjec
 							<BackgroundMainContentDesktop padding={true}>
 								<main>
 
-									<AComponentForCopy />
 									<GradesPanel
 										isTeacherOrPrincipal={isTeacherOrPrincipal}
 										gradesData={gradesData}
