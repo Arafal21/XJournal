@@ -10,7 +10,6 @@ import { SelectedClassContextProvider } from '../../../contexts/SelectedClassCon
 import { SelectedSubjectContextProvider } from '../../../contexts/SelectedSubjectContext';
 import { SelectedSemesterContextProvider } from '../../../contexts/SelectedSemesterContext';
 import { moderatingRoles } from '../../../constants/permissions';
-import { AComponentForCopy } from '../../../components/AComponentForCopy/AComponentForCopy';
 
 interface GradesPageProps {
 	selectedClass: string;

@@ -9,7 +9,7 @@ export const config = {
 
 export async function middleware(request: NextRequest) {
 	const { pathname } = request.nextUrl;
-	const isLoginPage = pathname === `/${BASE_ROUTE}`;
+	const isLoginPage = pathname === '/login';
 	const isProtected = pathname.startsWith(`/${BASE_ROUTE}`);
 
 	const user = await fetchAuthUser(request);
