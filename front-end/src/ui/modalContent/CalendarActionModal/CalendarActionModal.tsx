@@ -26,6 +26,7 @@ interface CalendarActionModalProps {
 export function CalendarActionModal({ closeActionModal, selectedExam }: CalendarActionModalProps) {
 	const { selectedClass } = use(SelectedClassContext);
 	const { selectedSubject } = use(SelectedSubjectContext);
+	const [isSubmitting, setIsSubmitting] = useState(false);
 
 	const getTime = (iso?: string) => {
 		if (!iso) return '';
@@ -57,7 +58,7 @@ export function CalendarActionModal({ closeActionModal, selectedExam }: Calendar
 
 	async function handleSubmit() {
 		if (selectedExamType === null) return;
-
+		setIsSubmitting(true);
 		try {
 			if (isEditing) {
 				await updateCalendar(
@@ -81,6 +82,8 @@ export function CalendarActionModal({ closeActionModal, selectedExam }: Calendar
 			closeActionModal();
 		} catch {
 			alert('The operation on the calendar failed. Try again later.');
+		} finally {
+			setIsSubmitting(false);
 		}
 	}
 
@@ -117,7 +120,7 @@ export function CalendarActionModal({ closeActionModal, selectedExam }: Calendar
 				</div>
 
 				<div className={styles.buttonContainer}>
-					<ModalActionButton isFormValid={true} onClick={handleSubmit}>
+					<ModalActionButton isFormValid={true} onClick={handleSubmit} isSubmitting={isSubmitting}>
 						{isEditing ? 'SAVE' : 'POST'}
 					</ModalActionButton>
 				</div>

@@ -93,7 +93,7 @@ export function ScheduleActionModal({ handleToggleModal, selectedHours, selected
 			</div>
 
 			<div className={styles.buttonContainer}>
-				<ModalActionButton isFormValid={!isSubmitting} onClick={handleSubmit}>
+				<ModalActionButton isFormValid={!isSubmitting} onClick={handleSubmit} isSubmitting={isSubmitting}>
 					{isSubmitting ? 'saving...' : selectedSubject ? 'SAVE' : 'POST'}
 				</ModalActionButton>
 			</div>

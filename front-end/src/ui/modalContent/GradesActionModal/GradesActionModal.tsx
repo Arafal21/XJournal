@@ -2,7 +2,7 @@
 
 import styles from './GradesActionModal.module.scss';
 
-import { use } from 'react';
+import { use, useState } from 'react';
 
 import Image from 'next/image';
 
@@ -38,6 +38,7 @@ export function GradesActionModal({
 }: GradesActionModalProps) {
 	const { selectedSemester } = use(SelectedSemesterContext);
 	const { selectedSubject } = use(SelectedSubjectContext);
+	const [isSubmitting, setIsSubmitting] = useState(false);
 
 	const isEditing = selectedGradeId !== '';
 
@@ -45,6 +46,7 @@ export function GradesActionModal({
 
 	async function handleSubmit() {
 		if (selectedGrade === null) return;
+		setIsSubmitting(true);
 		try {
 			if (isEditing) {
 				await updateGrade(selectedStudentId, selectedGradeId, selectedGrade);
@@ -54,6 +56,8 @@ export function GradesActionModal({
 			closeModal();
 		} catch {
 			alert('The operation on the grades failed. Try again later.');
+		} finally {
+			setIsSubmitting(false);
 		}
 	}
 
@@ -96,7 +100,10 @@ export function GradesActionModal({
 			</div>
 
 			<div className={styles.buttonContainer}>
-				<ModalActionButton isFormValid={selectedGrade !== null} onClick={handleSubmit}>
+				<ModalActionButton
+					isFormValid={selectedGrade !== null}
+					onClick={handleSubmit}
+					isSubmitting={isSubmitting}>
 					{isEditing ? 'SAVE' : 'POST'}
 				</ModalActionButton>
 			</div>

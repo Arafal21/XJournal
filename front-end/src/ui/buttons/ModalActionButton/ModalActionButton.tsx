@@ -8,10 +8,12 @@ interface ModalActionButtonProps {
 	isFormValid: boolean | number | null;
 	children: React.ReactNode;
 	onClick?: () => void;
+	isSubmitting?: boolean;
 }
 
-export function ModalActionButton({ isFormValid, children, onClick }: ModalActionButtonProps) {
-	const { pending } = useFormStatus();
+export function ModalActionButton({ isFormValid, children, onClick, isSubmitting = false }: ModalActionButtonProps) {
+	const { pending: formPending } = useFormStatus();
+	const pending = isSubmitting || formPending;
 
 	return (
 		<button
