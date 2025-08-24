@@ -69,7 +69,6 @@ export interface AnnouncementsFormState {
 
 export interface ModalSubmitButtonProps {
 	isFormValid: boolean;
-	currentAnnouncement?: Announcement | null;
 }
 
 export interface AnnouncementItemProps {
